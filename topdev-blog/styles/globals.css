@@ -105,3 +105,15 @@ a {
     color-scheme: dark;
   }
 }
+
+
+
+
+.gjs-block {
+  width:5% !important; 
+  height: auto;
+  min-height: auto;
+}
+#editor{
+  height:auto
+}
