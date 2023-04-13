@@ -115,5 +115,8 @@ a {
   min-height: auto;
 }
 #editor{
-  height:auto
+  height:auto;
+  margin-top:10em;
 }
+
+
