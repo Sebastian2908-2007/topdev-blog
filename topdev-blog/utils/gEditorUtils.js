@@ -34,11 +34,11 @@ export const addEditorCommand = (editor,htmlSetter) => {
       },
     });
   
-    //Clear Button
-    editor.Commands.add("cmd-clear", {
+    //Clear Button runs on export button click i.e. download
+    editor.Commands.add("export", {
       run: (editor) => {
-        editor.DomComponents.clear();
-        editor.CssComposer.clear();
+        editor.canvas.clear();
+        
       },
     });
   

@@ -5,7 +5,7 @@ import { addEditorCommand,addPanels } from "./gEditorUtils";
 
 export const gEditorConfig = (htmlSetter) => {
     const editor = grapesjs.init({
-        
+     
         blockManager: {
             appendTo: '#editor',
             blocks: [
