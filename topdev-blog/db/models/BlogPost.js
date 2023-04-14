@@ -6,7 +6,7 @@ const blogPostSchema = new Schema({
     postDate:{
         type: Date,
         default: Date.now,
-        get: timeStamp => dayJS(timeStamp).format('mM/DD/YYYY h:m a')
+        get: timeStamp => dayJS(timeStamp).format('M/DD/YYYY')
     },
     title:{
         type: String,

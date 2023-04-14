@@ -1,10 +1,22 @@
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
-import dynamic from "next/dynamic";
 import styles from '@/styles/Home.module.css';
-const GrapesEditor = dynamic(() =>import('@/components/GrapesEditor'),{ssr: false});
+import Link from 'next/link';
+
 
 
 export default function Home() {
+  const [postData,setPostData] = useState(null);
+  async function getPosts() {
+    const response = await fetch("api/getAllPosts");
+    const jsonData = await response.json();
+    setPostData(jsonData);
+  }
+  useEffect(() => {
+    getPosts();
+  },[]);
+  
+  console.log(postData);
   return (
     <>
       <Head>
@@ -14,7 +26,32 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-    <GrapesEditor/>
+    {!postData ? (<div>Loading...</div>):(
+      <section className='
+      h-100  
+      d-flex
+      flex-column
+      justify-content-between
+      '>
+        {
+      postData.map((post) => (
+        <div className='
+         d-flex
+         flex-column
+         justify-content-between
+         align-items-center
+         '
+         key={post._id}
+         >
+          <h2>{post.title}</h2>
+          <span>{post.postDate}</span>
+          <Link href={`/blogpost/${post.title}`}>Enjoy Post</Link>
+        </div>
+      ))
+      }
+      </section>
+    ) }
+    
       </main>
     </>
   )
