@@ -1,7 +1,7 @@
 import 'grapesjs/dist/css/grapes.min.css';
 import grapesjs from 'grapesjs';
 import grapesJsPresetWebpage from 'grapesjs-preset-webpage';
-import { addEditorCommand,panels } from "./gEditorUtils";
+import { addEditorCommand,addPanels } from "./gEditorUtils";
 
 export const gEditorConfig = () => {
     const editor = grapesjs.init({
@@ -94,20 +94,6 @@ export const gEditorConfig = () => {
         
         addEditorCommand(editor);
         //addPanels(panels,editor);
-        editor.Panels.addPanel(
-          {
-            id: "basic-actions",
-            //visible:true,
-            el: "#editor",
-            //el: ".gjs-pn-buttons",
-      buttons: [
-    {
-        id: "export",
-        className: "fa fa-download",
-        command: "export",
-      }
-    ]
-}
-        )
+  addPanels(editor);
 
 };

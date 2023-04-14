@@ -62,4 +62,22 @@ export const addEditorCommand = (editor) => {
     
   };
 
+  export const addPanels = (editor) => {
+    editor.Panels.addPanel(
+      {
+        id: "basic-actions",
+        //visible:true,
+        el: "#editor",
+        //el: ".gjs-pn-buttons",
+  buttons: [
+{
+    id: "export",
+    className: "fa fa-download",
+    command: "export",
+  }
+]
+}
+    )
+  };
+
 
