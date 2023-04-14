@@ -17,7 +17,7 @@ export const panels = {
 
 };
 
-export const addEditorCommand = (editor) => {
+export const addEditorCommand = (editor,htmlSetter) => {
     // Commands
     editor.Commands.add("set-device-desktop", {
       run: (editor) => editor.setDevice("Desktop"),
@@ -53,7 +53,7 @@ export const addEditorCommand = (editor) => {
     });
   
     editor.Commands.add("export", {
-     run: (editor) => console.log(editor.getHtml()),
+     run: (editor) => {console.log(editor.getHtml()); htmlSetter({title:'some title',html:editor.getHtml()})},
     });
   
     editor.Commands.add("new-tool-cmd", {
