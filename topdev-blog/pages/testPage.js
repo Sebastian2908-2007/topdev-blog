@@ -14,10 +14,13 @@ const TestPage = () => {
     );
 };
 
-/*export async function getStaticProps() {
-    const endJsx =  parse(rawHtml);
-    const html = <BlogHtml jsx={endJsx}/>
-    //console.log(html);
-    return {props:{html}};
-};*/
+/*
+colors for site
+DARKER BLUE rgb(33, 49, 89
+ NAVY rgb(61, 96, 152)
+ Whiteish 231, 231, 231) used for text shadow
+ black
+ white
+
+*/
 export default TestPage;

@@ -3,13 +3,26 @@
   min-height: 100vh;
 }
 
-/*
- //display: flex;
-  //flex-direction: column;
- // justify-content: space-between;
-  //align-items: center;
-  //
-padding: 6rem;
-*/
+.header{
+  background-color: black;
+  color:rgb(61, 96, 152);
+  padding:2%;
 
-/* Let's highlight canvas boundaries */
+  width:100%
+}
+.footer{
+  //background-color: white;
+  background-color: black;
+  color:rgb(61, 96, 152);
+}
+.imgDiv{
+ position: relative;
+ height:11vh;
+ width:30%
+}
+
+@media screen and (min-width:540px) {
+  .imgDiv{
+    width:20%;
+  }
+}
