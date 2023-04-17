@@ -10,7 +10,7 @@ const Layout = ({children}) => {
         alt='crush it catering logo'
         sizes="(max-width: 2560px) 22vw,"
         fill
-        /> 
+    /> 
   </div>
 </header>
 <main className={styles.main}>

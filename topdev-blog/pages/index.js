@@ -31,23 +31,55 @@ export default function Home() {
       d-flex
       flex-column
       justify-content-between
+      align-items-center
+      pb-5
       '>
+
+        <h1 className='
+        display-4 
+        text-center
+        my-3
+        '
+        >
+          Curious About Websites? 
+          &nbsp;
+           <small className='
+           text-muted
+           '>
+            TopDev Can help...
+            </small>
+          </h1>
+          <div className='
+             d-flex
+             justify-content-between
+             align-items-center
+             align-items-md-start
+             flex-column
+             flex-md-row
+          '>
+
         {
       postData.map((post) => (
         <div className='
+         card
+         w-75
+         p-2
+         mb-2
          d-flex
          flex-column
+         h-100
          justify-content-between
          align-items-center
          '
          key={post._id}
          >
-          <h2>{post.title}</h2>
+          <h2 className='text-center h4'>{post.title}</h2>
           <span>{post.postDate}</span>
           <Link href={`/blogpost/${post.title}`}>Enjoy Post</Link>
         </div>
       ))
       }
+      </div>
       </section>
     ) }
     </>
