@@ -61,10 +61,12 @@ try{
 
 export default function Post ({post}) {
     const postObj = JSON.parse(post);
-    let html = postObj.html.replace('<body ','<div ');
-    html = html.replace('</body>','</div>');
+    let html = postObj.html.replace(
+      '<body ',
+      '<section class="d-flex flex-column justify-content-between align-items-center m-4 bg-light text-center p-1 border border-dark" ');
+    html = html.replace('</body>','</section>');
     return(
-        <div>{parse(html)}</div>
+        parse(html)
     );
 
 };

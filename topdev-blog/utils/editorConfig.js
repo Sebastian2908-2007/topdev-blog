@@ -38,7 +38,7 @@ export const gEditorConfig = (htmlSetter) => {
                 label: 'sub heading',
                
                 // Use `image` component
-                content: `<h2>Sub heading</h2>`,
+                content: `<h2 class="text-danger">Sub heading</h2>`,
                 // The component `image` is activatable (shows the Asset Manager).
                 // We want to activate it once dropped in the canvas.
                 activate: true,
@@ -67,19 +67,127 @@ export const gEditorConfig = (htmlSetter) => {
                 // select: true, // Default with `activate: true`
               },
               {
-                id: 'list',
-                label: 'list',
+                id: 'basic-post',
+                label: 'BP',
                
                 // Use `image` component
                 content: `
-                <ul id='my-list'>
-                <li>item1</li>
-                
-                <li>item2</li>
-                
-                <li>item3</li>
-                
-                </ul>`,
+                <h1>H1 Title</h1>
+            <h2 class="mt-3 mb-3">h2 sub title</h2>
+            <p class="mb-5">
+            paragraph
+             &nbsp;
+             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>     
+            </p>
+            
+            <p class="mb-5">
+            paragraph
+             &nbsp;
+             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+            </p>
+            <p class="mb-5">
+            paragraph  
+             &nbsp;
+             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>   
+            </p>
+            <p class="mb-5">
+            paragraph
+             &nbsp;
+             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+            </p>
+            <p class="mb-5">
+            paragraph
+             &nbsp;
+             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+            </p>
+       
+            
+            <h2 class="mt-3 mb-3">h2 sub title</h2>
+            <p class="mb-5">
+            paragraph 
+             &nbsp;
+             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>     
+            </p>
+            
+            <p class="mb-5">
+            paragraph
+             &nbsp;
+             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+            </p>
+            <p class="mb-5">
+            paragraph
+             &nbsp;
+             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>   
+            </p>
+            <p class="mb-5">
+            paragraph
+             &nbsp;
+             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+            </p>
+            <p class="mb-5">
+            paragraph
+             &nbsp;
+             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+            </p>
+       
+            
+            <h2 class="mt-3 mb-3">h2 sub title</h2>
+            <p class="mb-5">
+            paragraph
+             &nbsp;
+             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>     
+            </p>
+            
+            <p class="mb-5">
+            paragraph
+             &nbsp;
+             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+            </p>
+            <p class="mb-5">
+            paragraph 
+             &nbsp;
+             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>   
+            </p>
+            <p class="mb-5">
+            paragraph
+             &nbsp;
+             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+            </p>
+            <p class="mb-5">
+            paragraph
+             &nbsp;
+             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+            </p>
+       
+            
+            <h2 class="mt-3 mb-3">h2 sub title</h2>
+            <p class="mb-5">
+            paragraph 
+             &nbsp;
+             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>     
+            </p>
+            
+            <p class="mb-5">
+            paragraph
+             &nbsp;
+             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+            </p>
+            <p class="mb-5">
+            paragraph
+             &nbsp;
+             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>   
+            </p>
+            <p class="mb-5">
+            paragraph
+             &nbsp;
+             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+            </p>
+            <p class="mb-5">
+            paragraph
+             &nbsp;
+             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+            </p>
+                `,
                 // The component `image` is activatable (shows the Asset Manager).
                 // We want to activate it once dropped in the canvas.
                 activate: true,
