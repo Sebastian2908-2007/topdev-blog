@@ -18,16 +18,17 @@
 .imgDiv{
  position: relative;
  height:11vh;
- width:30%
-}
-
-@media screen and (min-width:540px) {
-  .imgDiv{
-    width:20%;
-  }
+ width:30%;
 }
 @media screen and (min-width:360px) {
   .imgDiv{
     width:25%;
   }
 }
+
+@media screen and (min-width:540px) {
+  .imgDiv{
+    width:15%;
+  }
+}
+
