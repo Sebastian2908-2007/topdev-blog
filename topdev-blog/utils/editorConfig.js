@@ -76,28 +76,28 @@ export const gEditorConfig = (htmlSetter) => {
             <h2 class="mt-3 mb-3">h2 sub title</h2>
             <p class="mb-5">
             paragraph
-             &nbsp;
+             <br/>
              <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>     
             </p>
             
             <p class="mb-5">
             paragraph
-             &nbsp;
+             <br/>
              <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
             <p class="mb-5">
             paragraph  
-             &nbsp;
+             <br/>
              <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>   
             </p>
             <p class="mb-5">
             paragraph
-             &nbsp;
+             <br/>
              <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
             <p class="mb-5">
             paragraph
-             &nbsp;
+             <br/>
              <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
        
@@ -105,28 +105,28 @@ export const gEditorConfig = (htmlSetter) => {
             <h2 class="mt-3 mb-3">h2 sub title</h2>
             <p class="mb-5">
             paragraph 
-             &nbsp;
+             <br/>
              <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>     
             </p>
             
             <p class="mb-5">
             paragraph
-             &nbsp;
+             <br/>
              <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
             <p class="mb-5">
             paragraph
-             &nbsp;
+             <br/>
              <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>   
             </p>
             <p class="mb-5">
             paragraph
-             &nbsp;
+             <br/>
              <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
             <p class="mb-5">
             paragraph
-             &nbsp;
+             <br/>
              <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
        
@@ -134,28 +134,28 @@ export const gEditorConfig = (htmlSetter) => {
             <h2 class="mt-3 mb-3">h2 sub title</h2>
             <p class="mb-5">
             paragraph
-             &nbsp;
+             <br/>
              <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>     
             </p>
             
             <p class="mb-5">
             paragraph
-             &nbsp;
+             <br/>
              <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
             <p class="mb-5">
             paragraph 
-             &nbsp;
+             <br/>
              <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>   
             </p>
             <p class="mb-5">
             paragraph
-             &nbsp;
+             <br/>
              <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
             <p class="mb-5">
             paragraph
-             &nbsp;
+             <br/>
              <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
        
@@ -163,32 +163,557 @@ export const gEditorConfig = (htmlSetter) => {
             <h2 class="mt-3 mb-3">h2 sub title</h2>
             <p class="mb-5">
             paragraph 
-             &nbsp;
+             <br/>
              <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>     
             </p>
             
             <p class="mb-5">
             paragraph
-             &nbsp;
+             <br/>
              <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
             <p class="mb-5">
             paragraph
-             &nbsp;
+             <br/>
              <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>   
             </p>
             <p class="mb-5">
             paragraph
-             &nbsp;
+             <br/>
              <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
             <p class="mb-5">
             paragraph
-             &nbsp;
+             <br/>
              <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
                 `,
                 // The component `image` is activatable (shows the Asset Manager).
+                // We want to activate it once dropped in the canvas.
+                activate: true,
+                // select: true, // Default with `activate: true`
+              },
+              {
+                id: 'mid-complexity-post',
+                label: 'MCP',
+               
+                // Use `image` component
+                content: `
+                <h1>My cool Title</h1>
+                <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
+                <h3 class=" mb-3">H3 sub sub Heading</h3>
+                <p class="text-center mb-3">
+             Paragraph
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                </p>
+                <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
+                <h3 class=" mb-3">H3 sub sub Heading</h3>
+                <p class="text-center mb-3">
+             Paragraph
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                </p>
+                <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
+                <h3 class=" mb-3">H3 sub sub Heading</h3>
+                <p class="text-center mb-3">
+             Paragraph
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                </p>
+                <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
+                <h3 class=" mb-3">H3 sub sub Heading</h3>
+                <p class="text-center mb-3">
+             Paragraph
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                </p>
+                <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
+                <h3 class=" mb-3">H3 sub sub Heading</h3>
+                <p class="text-center mb-3">
+             Paragraph
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                </p>
+                <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
+                <h3 class=" mb-3">H3 sub sub Heading</h3>
+                <p class="text-center mb-3">
+             Paragraph
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                </p>
+                <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
+                <h3 class=" mb-3">H3 sub sub Heading</h3>
+                <p class="text-center mb-3">
+             Paragraph
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                </p>
+                <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
+                <h3 class=" mb-3">H3 sub sub Heading</h3>
+                <p class="text-center mb-3">
+             Paragraph
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                </p>
+                <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
+                <h3 class=" mb-3">H3 sub sub Heading</h3>
+                <p class="text-center mb-3">
+             Paragraph
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                </p>
+                <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
+                <h3 class=" mb-3">H3 sub sub Heading</h3>
+                <p class="text-center mb-3">
+             Paragraph
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                </p>
+                <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
+                <h3 class=" mb-3">H3 sub sub Heading</h3>
+                <p class="text-center mb-3">
+             Paragraph
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                </p>
+                <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
+                <h3 class=" mb-3">H3 sub sub Heading</h3>
+                <p class="text-center mb-3">
+             Paragraph
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                </p>
+                <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
+                <h3 class=" mb-3">H3 sub sub Heading</h3>
+                <p class="text-center mb-3">
+             Paragraph
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                </p>
+                <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
+                <h3 class=" mb-3">H3 sub sub Heading</h3>
+                <p class="text-center mb-3">
+             Paragraph
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                </p>
+                <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
+                <h3 class=" mb-3">H3 sub sub Heading</h3>
+                <p class="text-center mb-3">
+             Paragraph
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                </p>
+                <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
+                <h3 class=" mb-3">H3 sub sub Heading</h3>
+                <p class="text-center mb-3">
+             Paragraph
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                </p>
+                <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
+                <h3 class=" mb-3">H3 sub sub Heading</h3>
+                <p class="text-center mb-3">
+             Paragraph
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                </p>
+                <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
+                <h3 class=" mb-3">H3 sub sub Heading</h3>
+                <p class="text-center mb-3">
+             Paragraph
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                </p>
+                <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
+                <h3 class=" mb-3">H3 sub sub Heading</h3>
+                <p class="text-center mb-3">
+             Paragraph
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                </p>
+                <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
+                <h3 class=" mb-3">H3 sub sub Heading</h3>
+                <p class="text-center mb-3">
+             Paragraph
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                </p>
+                `, 
+                  // The component `image` is activatable (shows the Asset Manager).
+                // We want to activate it once dropped in the canvas.
+                activate: true,
+                // select: true, // Default with `activate: true`
+              },
+              {
+                id: 'migh-complexity-post',
+                label: 'HCP',
+               
+                // Use `image` component
+                content: `
+                <h1 class="mb-3">BLog post title</h1>
+                <h2 class="mb-3">Section title</h2>
+                <p>
+             PARAGRAPH
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                </p>
+       
+                <h3 class="mb-3">sub sub title</h3>
+                
+                <ul>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                </ul>
+               
+                <h2 class="mb-3">Section title</h2>
+                <p>
+             PARAGRAPH
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                </p>
+       
+                <h3 class="mb-3">sub sub title</h3>
+                
+                <ul>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                </ul>
+               
+                <h2 class="mb-3">Section title</h2>
+                <p>
+             PARAGRAPH
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                </p>
+       
+                <h3 class="mb-3">sub sub title</h3>
+                
+                <ul>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                </ul>
+               
+                <h2 class="mb-3">Section title</h2>
+                <p>
+             PARAGRAPH
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                </p>
+       
+                <h3 class="mb-3">sub sub title</h3>
+                
+                <ul>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                </ul>
+               
+                <h2 class="mb-3">Section title</h2>
+                <p>
+             PARAGRAPH
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                </p>
+       
+                <h3 class="mb-3">sub sub title</h3>
+                
+                <ul>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                </ul>
+               
+                <h2 class="mb-3">Section title</h2>
+                <p>
+             PARAGRAPH
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                </p>
+       
+                <h3 class="mb-3">sub sub title</h3>
+                
+                <ul>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                </ul>
+               
+                <h2 class="mb-3">Section title</h2>
+                <p>
+             PARAGRAPH
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                </p>
+       
+                <h3 class="mb-3">sub sub title</h3>
+                
+                <ul>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                </ul>
+               
+                <h2 class="mb-3">Section title</h2>
+                <p>
+             PARAGRAPH
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                </p>
+       
+                <h3 class="mb-3">sub sub title</h3>
+                
+                <ul>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                </ul>
+               
+                <h2 class="mb-3">Section title</h2>
+                <p>
+             PARAGRAPH
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                </p>
+       
+                <h3 class="mb-3">sub sub title</h3>
+                
+                <ul>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                </ul>
+               
+                <h2 class="mb-3">Section title</h2>
+                <p>
+             PARAGRAPH
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                </p>
+       
+                <h3 class="mb-3">sub sub title</h3>
+                
+                <ul>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                </ul>
+               
+                <h2 class="mb-3">Section title</h2>
+                <p>
+             PARAGRAPH
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                </p>
+       
+                <h3 class="mb-3">sub sub title</h3>
+                
+                <ul>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                </ul>
+               
+                <h2 class="mb-3">Section title</h2>
+                <p>
+             PARAGRAPH
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                </p>
+       
+                <h3 class="mb-3">sub sub title</h3>
+                
+                <ul>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                </ul>
+               
+                <h2 class="mb-3">Section title</h2>
+                <p>
+             PARAGRAPH
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                </p>
+       
+                <h3 class="mb-3">sub sub title</h3>
+                
+                <ul>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                </ul>
+               
+                <h2 class="mb-3">Section title</h2>
+                <p>
+             PARAGRAPH
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                </p>
+       
+                <h3 class="mb-3">sub sub title</h3>
+                
+                <ul>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                </ul>
+               
+                <h2 class="mb-3">Section title</h2>
+                <p>
+             PARAGRAPH
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                </p>
+       
+                <h3 class="mb-3">sub sub title</h3>
+                
+                <ul>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                </ul>
+               
+                <h2 class="mb-3">Section title</h2>
+                <p>
+             PARAGRAPH
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                </p>
+       
+                <h3 class="mb-3">sub sub title</h3>
+                
+                <ul>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                </ul>
+               
+                <h2 class="mb-3">Section title</h2>
+                <p>
+             PARAGRAPH
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                </p>
+       
+                <h3 class="mb-3">sub sub title</h3>
+                
+                <ul>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                </ul>
+               
+                <h2 class="mb-3">Section title</h2>
+                <p>
+             PARAGRAPH
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                </p>
+       
+                <h3 class="mb-3">sub sub title</h3>
+                
+                <ul>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                </ul>
+               
+                <h2 class="mb-3">Section title</h2>
+                <p>
+             PARAGRAPH
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                </p>
+       
+                <h3 class="mb-3">sub sub title</h3>
+                
+                <ul>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                </ul>
+               
+                <h2 class="mb-3">Section title</h2>
+                <p>
+             PARAGRAPH
+                    <br/>
+                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                </p>
+       
+                <h3 class="mb-3">sub sub title</h3>
+                
+                <ul>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                   <li class="mb-2">list item</li>
+                </ul>
+                `, 
+                  // The component `image` is activatable (shows the Asset Manager).
                 // We want to activate it once dropped in the canvas.
                 activate: true,
                 // select: true, // Default with `activate: true`
