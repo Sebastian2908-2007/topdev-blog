@@ -19,46 +19,16 @@ export const panels = {
 
 export const addEditorCommand = (editor,htmlSetter) => {
     // Commands
-    editor.Commands.add("set-device-desktop", {
-      run: (editor) => editor.setDevice("Desktop"),
-    });
-    editor.Commands.add("set-device-mobile", {
-      run: (editor) => editor.setDevice("Mobile"),
-    });
-  
-    // Save Button
-    editor.Commands.add("saveDb", {
-      run: (editor, sender) => {
-        sender && sender.set("active");
-        editor.store();
+    editor.Commands.add("export", {
+     run: (editor) => {
+       console.log(editor.getHtml());
+       htmlSetter({title:'some title',html:editor.getHtml()});
+       editor.DomComponents.clear();
+       editor.CssComposer.clear();
       },
     });
   
-    //Clear Button runs on export button click i.e. download
-    editor.Commands.add("export", {
-      run: (editor) => {
-        editor.canvas.clear();
-        
-      },
-    });
-  
-    //Undo
-    editor.Commands.add("undo", {
-      run: (editor) => editor.UndoManager.undo(),
-    });
-  
-    // Redo
-    editor.Commands.add("redo", {
-      run: (editor) => editor.UndoManager.redo(),
-    });
-  
-    editor.Commands.add("export", {
-     run: (editor) => {console.log(editor.getHtml()); htmlSetter({title:'some title',html:editor.getHtml()})},
-    });
-  
-    editor.Commands.add("new-tool-cmd", {
-      run: (editor) => console.log("Checking New Toolbar"),
-    });
+
     
   };
 

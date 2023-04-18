@@ -24,7 +24,7 @@ export const gEditorConfig = (htmlSetter) => {
               },
               {
                 id: 'text',
-                label: 'Main heading',
+                label: 'H1',
                
                 // Use `image` component
                 content: `<h1>Main heading</h1>`,
@@ -35,10 +35,10 @@ export const gEditorConfig = (htmlSetter) => {
               },
               {
                 id: 'sub text',
-                label: 'sub heading',
+                label: 'H2',
                
                 // Use `image` component
-                content: `<h2 class="text-danger">Sub heading</h2>`,
+                content: `<h2 class="mb-3 mt-3">Sub heading</h2>`,
                 // The component `image` is activatable (shows the Asset Manager).
                 // We want to activate it once dropped in the canvas.
                 activate: true,
@@ -46,10 +46,32 @@ export const gEditorConfig = (htmlSetter) => {
               },
               {
                 id: 'sub sub text',
-                label: 'sub sub heading',
+                label: 'H3',
                
                 // Use `image` component
-                content: `<h3>Sub sub heading</h3>`,
+                content: `<h3 class="mb-3 mt-2">Sub sub heading</h3>`,
+                // The component `image` is activatable (shows the Asset Manager).
+                // We want to activate it once dropped in the canvas.
+                activate: true,
+                // select: true, // Default with `activate: true`
+              },
+              {
+                id: 'sub sub sub text',
+                label: 'H4',
+               
+                // Use `image` component
+                content: `<h4 class="mb-3 mt-1">Sub sub heading</h4>`,
+                // The component `image` is activatable (shows the Asset Manager).
+                // We want to activate it once dropped in the canvas.
+                activate: true,
+                // select: true, // Default with `activate: true`
+              },
+              {
+                id: 'Link',
+                label: 'Link',
+               
+                // Use `image` component
+                content: `<a href="https://topdev.tech/signup" target="_blank" class="mb-3">link txt</a>`,
                 // The component `image` is activatable (shows the Asset Manager).
                 // We want to activate it once dropped in the canvas.
                 activate: true,
@@ -57,10 +79,37 @@ export const gEditorConfig = (htmlSetter) => {
               },
               {
                 id: 'paragraph',
-                label: 'paragraph',
+                label: 'P',
                
                 // Use `image` component
-                content: `<p>paragraph</p>`,
+                content: `<p class="mb-5 text-center">paragraph</p>`,
+                // The component `image` is activatable (shows the Asset Manager).
+                // We want to activate it once dropped in the canvas.
+                activate: true,
+                // select: true, // Default with `activate: true`
+              },
+              {
+                id: 'list',
+                label: 'LST',
+               
+                // Use `image` component
+                content: `<ul class="mb-4">
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                           </ul>`,
+                // The component `image` is activatable (shows the Asset Manager).
+                // We want to activate it once dropped in the canvas.
+                activate: true,
+                // select: true, // Default with `activate: true`
+              },
+              {
+                id: 'list item',
+                label: 'LI',
+               
+                // Use `image` component
+                content: `<li>item</li>`,
                 // The component `image` is activatable (shows the Asset Manager).
                 // We want to activate it once dropped in the canvas.
                 activate: true,
@@ -354,7 +403,7 @@ export const gEditorConfig = (htmlSetter) => {
                 content: `
                 <h1 class="mb-3">BLog post title</h1>
                 <h2 class="mb-3">Section title</h2>
-                <p>
+                <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
                     <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
@@ -372,7 +421,7 @@ export const gEditorConfig = (htmlSetter) => {
                 </ul>
                
                 <h2 class="mb-3">Section title</h2>
-                <p>
+                <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
                     <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
@@ -390,7 +439,7 @@ export const gEditorConfig = (htmlSetter) => {
                 </ul>
                
                 <h2 class="mb-3">Section title</h2>
-                <p>
+                <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
                     <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
@@ -408,7 +457,7 @@ export const gEditorConfig = (htmlSetter) => {
                 </ul>
                
                 <h2 class="mb-3">Section title</h2>
-                <p>
+                <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
                     <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
@@ -426,7 +475,7 @@ export const gEditorConfig = (htmlSetter) => {
                 </ul>
                
                 <h2 class="mb-3">Section title</h2>
-                <p>
+                <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
                     <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
@@ -444,7 +493,7 @@ export const gEditorConfig = (htmlSetter) => {
                 </ul>
                
                 <h2 class="mb-3">Section title</h2>
-                <p>
+                <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
                     <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
@@ -462,7 +511,7 @@ export const gEditorConfig = (htmlSetter) => {
                 </ul>
                
                 <h2 class="mb-3">Section title</h2>
-                <p>
+                <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
                     <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
@@ -480,7 +529,7 @@ export const gEditorConfig = (htmlSetter) => {
                 </ul>
                
                 <h2 class="mb-3">Section title</h2>
-                <p>
+                <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
                     <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
@@ -498,7 +547,7 @@ export const gEditorConfig = (htmlSetter) => {
                 </ul>
                
                 <h2 class="mb-3">Section title</h2>
-                <p>
+                <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
                     <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
@@ -516,7 +565,7 @@ export const gEditorConfig = (htmlSetter) => {
                 </ul>
                
                 <h2 class="mb-3">Section title</h2>
-                <p>
+                <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
                     <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
@@ -534,7 +583,7 @@ export const gEditorConfig = (htmlSetter) => {
                 </ul>
                
                 <h2 class="mb-3">Section title</h2>
-                <p>
+                <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
                     <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
@@ -552,7 +601,7 @@ export const gEditorConfig = (htmlSetter) => {
                 </ul>
                
                 <h2 class="mb-3">Section title</h2>
-                <p>
+                <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
                     <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
@@ -570,7 +619,7 @@ export const gEditorConfig = (htmlSetter) => {
                 </ul>
                
                 <h2 class="mb-3">Section title</h2>
-                <p>
+                <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
                     <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
@@ -588,7 +637,7 @@ export const gEditorConfig = (htmlSetter) => {
                 </ul>
                
                 <h2 class="mb-3">Section title</h2>
-                <p>
+                <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
                     <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
@@ -606,7 +655,7 @@ export const gEditorConfig = (htmlSetter) => {
                 </ul>
                
                 <h2 class="mb-3">Section title</h2>
-                <p>
+                <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
                     <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
@@ -624,7 +673,7 @@ export const gEditorConfig = (htmlSetter) => {
                 </ul>
                
                 <h2 class="mb-3">Section title</h2>
-                <p>
+                <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
                     <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
@@ -642,7 +691,7 @@ export const gEditorConfig = (htmlSetter) => {
                 </ul>
                
                 <h2 class="mb-3">Section title</h2>
-                <p>
+                <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
                     <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
@@ -660,7 +709,7 @@ export const gEditorConfig = (htmlSetter) => {
                 </ul>
                
                 <h2 class="mb-3">Section title</h2>
-                <p>
+                <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
                     <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
@@ -678,7 +727,7 @@ export const gEditorConfig = (htmlSetter) => {
                 </ul>
                
                 <h2 class="mb-3">Section title</h2>
-                <p>
+                <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
                     <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
@@ -696,7 +745,7 @@ export const gEditorConfig = (htmlSetter) => {
                 </ul>
                
                 <h2 class="mb-3">Section title</h2>
-                <p>
+                <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
                     <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
