@@ -1,5 +1,8 @@
 
 const TestPage = () => {
+    let string = 'dl;sdj@topdev.tech';
+    const admin = string.split('@');
+    console.log(admin[1]);
     return(
         <section class="d-flex flex-column justify-content-between align-items-center m-4 bg-light text-center p-1 border border-dark">
          

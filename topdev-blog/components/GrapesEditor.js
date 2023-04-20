@@ -12,8 +12,7 @@ const GrapesEditor = () => {
     useEffect(() => {
    const editor = gEditorConfig(setBlogPost);
    setEditor(editor);
-   console.log(blogPost);
-    }, [blogPost]);
+    }, []);
    
   
   

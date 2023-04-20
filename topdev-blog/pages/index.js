@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+//import cookie from 'js-cookie';
 
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
     getPosts();
   },[]);
   
-  console.log(postData);
+  //console.log(cookie.get('isAdmin'));
   return (
     <>
       <Head>

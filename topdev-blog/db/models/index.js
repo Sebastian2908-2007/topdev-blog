@@ -1,3 +1,3 @@
 import BlogPost from './BlogPost';
-
-module.exports = {BlogPost};
+import User from './users';
+module.exports = {BlogPost,User};
