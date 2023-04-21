@@ -18,6 +18,14 @@ const blogPostSchema = new Schema({
         required: true,
         trim: true 
     },
+    comments:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Comment'
+    }],
+    likes:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Like'
+    }]
 });
 
 const BlogPost = mongoose.models.BlogPost || model('BlogPost',blogPostSchema);
