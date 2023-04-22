@@ -16,7 +16,7 @@ const Login = () => {
     const {user,token} = await authenticateUser(email, password);
 
     if (user) {
-      
+      localStorage.setItem('user_token', token);
       const decodedToken = jwt.decode(token);
      cookie.set("isAdmin",`${decodedToken.isAdmin}`, {expires:1/24});
      

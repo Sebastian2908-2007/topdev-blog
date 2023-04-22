@@ -1,6 +1,10 @@
 import dbConnect from "@/db/config/connection";
-import {BlogPost} from '../../db/models';
+import {BlogPost} from '@/db/models';
 import parse from 'html-react-parser';
+import dynamic from "next/dynamic";
+const Likes = dynamic(() =>import('@/components/Likes'),{ssr: false});
+
+
 
 export async function getStaticPaths () {
 let data;
@@ -34,7 +38,6 @@ return{
 export async function getStaticProps(context) {
     const postTitle = context.params.title;
 let data;
-
 try{ 
     await dbConnect();
     }catch(e) {
@@ -42,9 +45,9 @@ try{
     }
     
     try{
-      const postData = await BlogPost.findOne({title:postTitle});
+      const postData = await BlogPost.findOne({title:postTitle}).populate('comments').populate('likes');
+      //console.log(postData.comments);
       data = JSON.stringify(postData);
-      console.log(data)
     }catch(e) {
   console.log(e);
     }
@@ -60,13 +63,37 @@ try{
 
 
 export default function Post ({post}) {
-    const postObj = JSON.parse(post);
+ 
+  const postObj = JSON.parse(post);
+ 
+   console.log(postObj.likes);
+   const comments = postObj.comments;
+console.log(postObj);
     let html = postObj.html.replace(
       '<body ',
       '<section class="d-flex flex-column justify-content-between align-items-center m-4 bg-light text-center p-1 border border-dark" ');
-    html = html.replace('</body>','</section>');
+    html = html.replace('</body>','</section>');  
+
+
+
     return(
-        parse(html)
+      <>
+     <Likes postObj={postObj}/>
+      {parse(html)}
+      {!comments ? (<div>no comments yet</div>):(
+        comments.map(comment => (
+          <section className="d-flex flex-column justify-content-between align-items-center m-4 bg-light text-center p-1 border border-dark"  key={comment._id}>
+            <h4>Comments</h4>
+            <div className="border border-dark">
+            <p>
+            {comment.text}
+            </p>
+            <span>{comment.date}</span>
+            </div>
+            </section>
+        ))
+      )}
+      </>
     );
 
 };

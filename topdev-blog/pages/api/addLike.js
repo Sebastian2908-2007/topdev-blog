@@ -2,6 +2,7 @@ import dbConnect from "@/db/config/connection";
 import {Like,BlogPost} from '@/db/models';
 
 export default async function addLike({body},res) {
+    console.log('Data in route',body);
     let like;
     try{
         await dbConnect();

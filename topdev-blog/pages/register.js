@@ -27,6 +27,7 @@ export default function Register() {
           const data = await response.json();
           const user = data.user;
           const token = data.token;
+          localStorage.setItem('user_token', token);
           const decodedToken = jwt.decode(token);
           cookie.set("isAdmin",`${decodedToken.isAdmin}`, {expires:1/24});
        // if admin go to create post page else go home
