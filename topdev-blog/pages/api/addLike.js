@@ -2,7 +2,9 @@ import dbConnect from "@/db/config/connection";
 import {Like,BlogPost} from '@/db/models';
 
 export default async function addLike({body},res) {
-    console.log('Data in route',body);
+    const blogPost = await BlogPost.findOne({_id: body.blogPost});
+    console.log("likes",blogPost.likes);
+    console.log("like USer ids",blogPost.likes.user);
     let like;
     try{
         await dbConnect();

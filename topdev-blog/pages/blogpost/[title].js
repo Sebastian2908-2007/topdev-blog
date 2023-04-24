@@ -66,9 +66,9 @@ export default function Post ({post}) {
  
   const postObj = JSON.parse(post);
  
-   console.log(postObj.likes);
+   //console.log(postObj.likes);
    const comments = postObj.comments;
-console.log(postObj);
+//console.log(postObj);
     let html = postObj.html.replace(
       '<body ',
       '<section class="d-flex flex-column justify-content-between align-items-center m-4 bg-light text-center p-1 border border-dark" ');
@@ -80,19 +80,21 @@ console.log(postObj);
       <>
      <Likes postObj={postObj}/>
       {parse(html)}
+      <section className="d-flex flex-column justify-content-between align-items-center m-4 bg-light text-center p-1 border border-dark" >
+            <h4>Comments</h4>
       {!comments ? (<div>no comments yet</div>):(
         comments.map(comment => (
-          <section className="d-flex flex-column justify-content-between align-items-center m-4 bg-light text-center p-1 border border-dark"  key={comment._id}>
-            <h4>Comments</h4>
-            <div className="border border-dark">
+         
+            <div key={comment._id} className="d-flex flex-column justify-content-between align-items-center border border-dark">
             <p>
             {comment.text}
             </p>
             <span>{comment.date}</span>
             </div>
-            </section>
+          
         ))
       )}
+        </section>
       </>
     );
 

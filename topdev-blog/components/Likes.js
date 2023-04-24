@@ -4,9 +4,16 @@ const Likes = ({postObj}) => {
   const [likeCnt, setLikeCnt] = useState(postObj.likes.length);
   const userToken = localStorage.getItem('user_token');
   const decodedToken = jwt.decode(userToken);
-  console.log(postObj.likes);
+  //console.log(postObj.likes);
+  //console.log(decodedToken.exp < Date.now() / 1000);
 
   const addLike = async (user,blogPost) => {
+    
+    if(decodedToken.exp < Date.now() / 1000) {
+      alert('you must be logged in to leave a like on a post');
+      return;
+    }else{
+
     const response = await fetch('/api/addLike',{
      method:'POST',
      headers:{
@@ -14,6 +21,7 @@ const Likes = ({postObj}) => {
      },
      body: JSON.stringify({user,blogPost})
     });
+
     if(response.ok) {
      console.log(response.json());
      setLikeCnt(likeCnt + 1)
@@ -21,12 +29,19 @@ const Likes = ({postObj}) => {
     }else{
      console.log('something went wrong');
     }
+
+  }
     
  };
 
 return(
   <div>
-    <button onClick={()=> addLike(decodedToken.id,postObj._id)}>like post</button>
+    <button onClick={()=>
+        !decodedToken ? alert('you must be logged in to leave a like')
+        :
+        addLike(decodedToken.id,postObj._id)}>
+          like post
+        </button>
     <span>{likeCnt}</span>
   </div>
 );
