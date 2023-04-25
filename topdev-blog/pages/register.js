@@ -30,6 +30,7 @@ export default function Register() {
           localStorage.setItem('user_token', token);
           const decodedToken = jwt.decode(token);
           cookie.set("isAdmin",`${decodedToken.isAdmin}`, {expires:2/24});
+          cookie.set("isLoggedIn",true, {expires:2/24});
        // if admin go to create post page else go home
       if(!user.isAdmin){
         router.push('/');
