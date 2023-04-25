@@ -73,6 +73,7 @@ export default function Post ({post}) {
       '<body ',
       '<section class="d-flex flex-column justify-content-between align-items-center m-4 bg-light text-center p-1 border border-dark" ');
     html = html.replace('</body>','</section>');  
+    //console.log(html);
 
 
 

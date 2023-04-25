@@ -18,7 +18,7 @@ const Login = () => {
     if (user) {
       localStorage.setItem('user_token', token);
       const decodedToken = jwt.decode(token);
-     cookie.set("isAdmin",`${decodedToken.isAdmin}`, {expires:1/24});
+     cookie.set("isAdmin",`${decodedToken.isAdmin}`, {expires:2/24});
      
 
       // if admin go to create post page else go home
@@ -26,10 +26,11 @@ const Login = () => {
         router.push('/');
       }else{
       router.push('/createPost');
-      }
+      };
+
     } else {
       console.log('Invalid email or password');
-    }
+    };
   };
 
   const authenticateUser = async (email, password) => {
@@ -53,11 +54,10 @@ const Login = () => {
 
     if (response.ok) {
       const data = await response.json();
-      console.log(data);
       const user = data.user;
       const token = data.token;
       return {user, token};
-    }
+    };
 
     return null;
   };

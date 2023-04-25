@@ -39,15 +39,13 @@ else if (req.method === 'POST') {
     let isAdmin = false;
     if(email.split('@')[1] === process.env.IS_ADMIN) {
         isAdmin = true;
-    }
-    console.log(email,password);
-
+    };
     try {
       const existingUser = await User.findOne({ email });
 
       if (existingUser) {
         return res.status(409).json({ message: 'Email already registered' });
-      }
+      };
 
       const user = await User.create({email:email, password:password, isAdmin:isAdmin });
 
@@ -61,14 +59,12 @@ else if (req.method === 'POST') {
         { expiresIn: '2h' }
       );
 
-       console.log(token);
-
       res.status(201).json({ user,token });
     } catch (error) {
       console.error(error);
       res.status(500).json({ message: 'Internal server error' });
-    }
+    };
   } else {
     res.status(405).json({ message: 'Method not allowed' });
-  }
+  };
 };

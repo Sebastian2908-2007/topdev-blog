@@ -4,8 +4,7 @@ const Likes = ({postObj}) => {
   const [likeCnt, setLikeCnt] = useState(postObj.likes.length);
   const userToken = localStorage.getItem('user_token');
   const decodedToken = jwt.decode(userToken);
-  //console.log(postObj.likes);
-  //console.log(decodedToken.exp < Date.now() / 1000);
+  
 
   const addLike = async (user,blogPost) => {
     
@@ -23,14 +22,18 @@ const Likes = ({postObj}) => {
     });
 
     if(response.ok) {
-     console.log(response.json());
-     setLikeCnt(likeCnt + 1)
+      const data = await response.json();
+     if(data.DltFrmUi){
+      setLikeCnt(likeCnt - 1);
+      return;
+     };
+     setLikeCnt(likeCnt + 1);
 
     }else{
      console.log('something went wrong');
-    }
+    };
 
-  }
+  };
     
  };
 
