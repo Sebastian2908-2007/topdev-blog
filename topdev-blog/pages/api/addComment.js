@@ -30,7 +30,7 @@ export default async function addComment ({body},res) {
 
    
 
-   res.status(200).json(updatedPost);
+   res.status(200).json(comment);
     }
     catch(e){
         console.log(e);
