@@ -2,14 +2,18 @@ import { useState } from 'react';
 import cookie from 'js-cookie';
 import jwt from 'jsonwebtoken';
 
-const Comments = ({postObj}) => {
-   
+const Comments = ({postObj}) => { 
     const comments = postObj.comments;
+    // below state will handle a comment on submission in order to update the UI
     const [userComment,setUserComment] = useState([]);
+    // below state opens comment form
     const [openCommentForm,setOpenCommentForm] = useState(false);
-    const [text, setText] = useState()
+    // this is the text for a comment
+    const [text, setText] = useState();
+    // this cookie is used to determine if a user is logged in
     const isLoggedIn = cookie.get('isLoggedIn');
 
+// this makes sure a user is logged in before opening the comment form
 const commentFormHandler = () => {
     if(isLoggedIn) {
         setOpenCommentForm(true);
@@ -18,6 +22,7 @@ const commentFormHandler = () => {
     };
 };
 
+// below handles comment submission
 const submitComment = async () => {
     const blogPost = postObj._id;
     const user_token = localStorage.getItem('user_token');
@@ -32,9 +37,11 @@ const submitComment = async () => {
     body: JSON.stringify({text,blogPost,user}),
   });
   const commentData = await response.json();
-  setUserComment([...userComment, {text: commentData.text, date: commentData.date}]);
+  // below sets the comment state to dynamically update ui with new comment so api call is not needed
+  setUserComment([...userComment, {text: commentData.text, date: commentData.date, userName:commentData.user.userName}]);
 };
 
+// below gets comment text value from the textarea element
 const handleChange = (event) => {
     const {value} = event.target;
     setText(
@@ -63,11 +70,18 @@ const handleChange = (event) => {
 
         {userComment.length ? 
         userComment.map(comment => (
-            <div key={comment.date} className="d-flex flex-column justify-content-between align-items-center border border-dark">
+            <div key={comment.text} className="
+            d-flex flex-column
+            justify-content-between
+            align-items-center
+            w-100
+            mb-3"
+             >
+           <span className='mb-2'><u>By {comment.userName}</u></span>
             <p>
             {comment.text}
             </p>
-            <span>{comment.date}</span>
+            <span className='text-info'>{comment.date.split('T')[0]}</span>
             </div>
         ))
             
@@ -78,11 +92,19 @@ const handleChange = (event) => {
         {!comments ? (<div>no comments yet</div>):(
           comments.map(comment => (
            
-              <div key={comment._id} className="d-flex flex-column justify-content-between align-items-center border border-dark">
+              <div key={comment._id} className="
+              d-flex
+              flex-column
+              justify-content-between
+              align-items-center
+              w-100
+              mb-3"
+              >
+                 <span className='mb-2'><u>By {comment.user.userName}</u></span>
               <p>
               {comment.text}
               </p>
-              <span>{comment.date}</span>
+              <span className='text-info'>{comment.date.split('T')[0]}</span>
               </div>
             
           ))

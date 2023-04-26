@@ -46,7 +46,7 @@ try{
     }
     
     try{
-      const postData = await BlogPost.findOne({title:postTitle}).populate('comments').populate('likes');
+      const postData = await BlogPost.findOne({title:postTitle}).populate('comments').populate({path:'comments',populate:'user'}).populate('likes');
       //console.log(postData.comments);
       data = JSON.stringify(postData);
     }catch(e) {
@@ -66,9 +66,10 @@ try{
 export default function Post ({post}) {
  
   const postObj = JSON.parse(post);
- 
+  console.log(postObj);
    //console.log(postObj.likes);
-   const comments = postObj.comments;
+   //const comments = postObj.comments;
+ 
 //console.log(postObj);
     let html = postObj.html.replace(
       '<body ',

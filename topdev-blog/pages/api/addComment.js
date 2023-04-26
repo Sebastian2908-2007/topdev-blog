@@ -30,7 +30,8 @@ export default async function addComment ({body},res) {
 
    
 
-   res.status(200).json(comment);
+   const commentData = await comment.populate('user');
+   res.status(200).json(commentData);
     }
     catch(e){
         console.log(e);

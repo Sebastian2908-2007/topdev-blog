@@ -35,7 +35,7 @@ export default async function handler(req, res) {
     
 }
 else if (req.method === 'POST') {
-    const { email, password } = req.body;
+    const { email, password, userName } = req.body;
     let isAdmin = false;
     if(email.split('@')[1] === process.env.IS_ADMIN) {
         isAdmin = true;
@@ -47,11 +47,12 @@ else if (req.method === 'POST') {
         return res.status(409).json({ message: 'Email already registered' });
       };
 
-      const user = await User.create({email:email, password:password, isAdmin:isAdmin });
-
+      const user = await User.create({email:email, password:password, isAdmin:isAdmin, userName: userName });
+      console.log(user);
       const token = jwt.sign(
         {
           id: user.id,
+          userName: user.userName,
           email: user.email,
           isAdmin: user.isAdmin
         },

@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 export default function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [userName, setUserName] = useState('');
   const router = useRouter();
 
   const handleSubmit = async (event) => {
@@ -19,7 +20,7 @@ export default function Register() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password, userName }),
       });
       console.log(response) ;
 
@@ -53,6 +54,14 @@ export default function Register() {
       <h1>Register</h1>
       <form onSubmit={handleSubmit}>
         <div>
+        <label htmlFor="userName">UserName</label>
+          <input
+            type="userName"
+            id="userName"
+            value={userName}
+            onChange={(event) => setUserName(event.target.value)}
+            required
+          />
           <label htmlFor="email">Email</label>
           <input
             type="email"
