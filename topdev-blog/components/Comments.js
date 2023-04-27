@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import cookie from 'js-cookie';
 import jwt from 'jsonwebtoken';
+import dynamic from 'next/dynamic';
+const DltEditComment = dynamic(() =>import('@/components/DltEditComment'),{ssr: false});
 
 const Comments = ({postObj}) => { 
     const comments = postObj.comments;
@@ -51,6 +53,7 @@ const handleChange = (event) => {
 
 };
 
+
     return(
         <>
         <h4>Comments</h4>
@@ -100,7 +103,12 @@ const handleChange = (event) => {
               w-100
               mb-3"
               >
+                <div className='d-flex flex-row justify-content-between w-100'>
                  <span className='mb-2'><u>By {comment.user.userName}</u></span>
+                 <DltEditComment
+                  comment={comment}
+                  />
+                </div>
               <p>
               {comment.text}
               </p>

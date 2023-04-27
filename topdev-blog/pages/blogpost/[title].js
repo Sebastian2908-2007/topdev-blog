@@ -66,19 +66,12 @@ try{
 export default function Post ({post}) {
  
   const postObj = JSON.parse(post);
-  console.log(postObj);
-   //console.log(postObj.likes);
-   //const comments = postObj.comments;
  
-//console.log(postObj);
     let html = postObj.html.replace(
       '<body ',
       '<section class="d-flex flex-column justify-content-between align-items-center m-4 bg-light text-center p-1 border border-dark" ');
     html = html.replace('</body>','</section>');  
-    //console.log(html);
-
-
-
+    
     return(
       <>
      <Likes postObj={postObj}/>
