@@ -66,6 +66,23 @@ const handleChange = (event) => {
 
 };
 
+const submitEdit = async (comment,text) => {
+    try{
+    const response = await fetch('/api/editComment',{
+        method:"POST",
+        headers:{
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({comment,text}),
+    });
+    console.log(response);
+    window.location.reload();
+    }catch(e){
+        console.log(e);
+    }
+
+};
+
 useEffect(() =>  {console.log(userComment)},[userComment]);
     return(
         <>
@@ -108,7 +125,7 @@ useEffect(() =>  {console.log(userComment)},[userComment]);
            isEdit && commentToEdit === comment._id ? (
                  <>
               <textarea onChange={handleChange} defaultValue={text}/>
-              <button onClick={() => console.log(text)}>Submit edit</button>
+              <button onClick={() => submitEdit(commentToEdit,text)}>Submit edit</button>
                  </>
                  )
              :
@@ -151,7 +168,7 @@ useEffect(() =>  {console.log(userComment)},[userComment]);
            isEdit && commentToEdit === comment._id ? (
                  <>
               <textarea onChange={handleChange} defaultValue={text}/>
-              <button onClick={() => console.log(text)}>Submit edit</button>
+              <button onClick={() => submitEdit(commentToEdit,text)}>Submit edit</button>
                  </>
                  )
              :
