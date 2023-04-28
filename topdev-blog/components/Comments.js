@@ -12,6 +12,8 @@ const Comments = ({postObj}) => {
     const [openCommentForm,setOpenCommentForm] = useState(false);
     // this is the text for a comment
     const [text, setText] = useState();
+    const [isEdit,setIsEdit] = useState(null);
+    const [commentToEdit,setCommentToEdit] = useState();
     // this cookie is used to determine if a user is logged in
     const isLoggedIn = cookie.get('isLoggedIn');
 
@@ -40,7 +42,18 @@ const submitComment = async () => {
   });
   const commentData = await response.json();
   // below sets the comment state to dynamically update ui with new comment so api call is not needed
-  setUserComment([...userComment, {text: commentData.text, date: commentData.date, userName:commentData.user.userName}]);
+  setUserComment(
+    [...userComment, 
+    {
+         _id: commentData._id,         
+         blogPost: commentData.blogPost,
+         text: commentData.text,
+         date: commentData.date,
+         userName:commentData.user.userName,
+         user:{_id: commentData.user._id}
+    }
+    ]
+         );
 };
 
 // below gets comment text value from the textarea element
@@ -53,7 +66,7 @@ const handleChange = (event) => {
 
 };
 
-
+useEffect(() =>  {console.log(userComment)},[userComment]);
     return(
         <>
         <h4>Comments</h4>
@@ -80,10 +93,31 @@ const handleChange = (event) => {
             w-100
             mb-3"
              >
-           <span className='mb-2'><u>By {comment.userName}</u></span>
-            <p>
-            {comment.text}
-            </p>
+
+            <div className='d-flex flex-row justify-content-between w-100'>
+                 <span className='mb-2'><u>By {comment.userName}</u></span>
+                 <DltEditComment
+                 isLoggedIn={isLoggedIn}
+                 comment={comment}
+                 setIsEdit={setIsEdit}
+                 setText={setText}
+                 setCommentToEdit={setCommentToEdit}
+                  />
+            </div>
+              {
+           isEdit && commentToEdit === comment._id ? (
+                 <>
+              <textarea onChange={handleChange} defaultValue={text}/>
+              <button onClick={() => console.log(text)}>Submit edit</button>
+                 </>
+                 )
+             :
+             ( 
+                <p>
+                {comment.text}
+                </p>
+             )
+               }
             <span className='text-info'>{comment.date.split('T')[0]}</span>
             </div>
         ))
@@ -106,12 +140,27 @@ const handleChange = (event) => {
                 <div className='d-flex flex-row justify-content-between w-100'>
                  <span className='mb-2'><u>By {comment.user.userName}</u></span>
                  <DltEditComment
-                  comment={comment}
+                 isLoggedIn={isLoggedIn}
+                 comment={comment}
+                 setIsEdit={setIsEdit}
+                 setText={setText}
+                 setCommentToEdit={setCommentToEdit}
                   />
                 </div>
-              <p>
-              {comment.text}
-              </p>
+                {
+           isEdit && commentToEdit === comment._id ? (
+                 <>
+              <textarea onChange={handleChange} defaultValue={text}/>
+              <button onClick={() => console.log(text)}>Submit edit</button>
+                 </>
+                 )
+             :
+             ( 
+                <p>
+                {comment.text}
+                </p>
+             )
+               }
               <span className='text-info'>{comment.date.split('T')[0]}</span>
               </div>
             

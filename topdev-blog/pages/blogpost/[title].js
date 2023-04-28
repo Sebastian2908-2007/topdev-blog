@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Comments from "@/components/Comments";
 import dbConnect from "@/db/config/connection";
 import {BlogPost} from '@/db/models';
@@ -64,7 +65,6 @@ try{
 
 
 export default function Post ({post}) {
- 
   const postObj = JSON.parse(post);
  
     let html = postObj.html.replace(
