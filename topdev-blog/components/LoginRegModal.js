@@ -31,14 +31,14 @@ const style = {
 
 const LoginModal = ({loginModalOpen,setLoginModalOpen}) => {
     const handleClose = () => {
-    
+        setLgnSgnUp('signup')
         setLoginModalOpen(false);
     };
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const router = useRouter();
-  
+    const [lgnInSgnUp, setLgnSgnUp] = useState('signup');
     const handleSubmit = async (e) => {
       e.preventDefault();
   
@@ -101,7 +101,45 @@ const LoginModal = ({loginModalOpen,setLoginModalOpen}) => {
         aria-describedby="modal-modal-description"
         >
             <Box sx={style}>
-        <form className='d-flex flex-column align-items-center mt-2' onSubmit={handleSubmit}>
+                {lgnInSgnUp === 'signup' ?
+
+        (
+<form className='d-flex flex-column align-items-center' onSubmit={handleSubmit}>
+        
+        <label className='text-white' htmlFor="userName">UserName</label>
+          <input
+            type="userName"
+            id="userName"         
+            onChange={(event) => setUserName(event.target.value)}
+            required
+          />
+          <label className='text-white' htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            required
+          />
+        
+        
+          <label className='text-white' htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+            required
+          />
+        <div className='d-flex flex-row w-100 justify-content-between'>
+        <button className='w-25 mt-4 text-light bg-primary' type="submit">Register</button>
+        <button onClick={() => handleClose()} className='w-25 mt-4  text-light bg-danger' type="submit">Cancel</button>
+        </div>
+        <span onClick={() => setLgnSgnUp('login')} className='text-info'>Login</span>
+      </form>
+        )
+        :
+        (<form className='d-flex flex-column align-items-center mt-2' onSubmit={handleSubmit}>
         <label className='text-light'>
           Email:
           </label>
@@ -126,7 +164,8 @@ const LoginModal = ({loginModalOpen,setLoginModalOpen}) => {
         <button className='p-1 rounded  text-light bg-primary' type="submit">Log in</button>
         <button onClick={() => handleClose()}className='p-1 rounded bg-success text-light bg-danger' type="submit">cancel</button>
         </div>
-      </form>
+      </form>)
+     }
       </Box>
       </Modal>
     );

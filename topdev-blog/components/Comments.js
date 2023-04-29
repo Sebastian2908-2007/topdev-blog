@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken';
 import dynamic from 'next/dynamic';
 const DltEditComment = dynamic(() =>import('@/components/DltEditComment'),{ssr: false});
 
-const Comments = ({postObj}) => { 
+const Comments = ({postObj,setLoginModalOpen}) => { 
     const comments = postObj.comments;
     // below state will handle a comment on submission in order to update the UI
     const [userComment,setUserComment] = useState([]);
@@ -22,7 +22,7 @@ const commentFormHandler = () => {
     if(isLoggedIn) {
         setOpenCommentForm(true);
     }else{
-        alert('you must login to leave comments');
+        setLoginModalOpen(true);
     };
 };
 

@@ -6,7 +6,7 @@ import {BlogPost} from '@/db/models';
 import parse from 'html-react-parser';
 import dynamic from "next/dynamic";
 import ShareModal from "@/components/ShareModal";
-import LoginModal from "@/components/LoginModal";
+import LoginRegModal from "@/components/LoginRegModal";
 const Likes = dynamic(() =>import('@/components/Likes'),{ssr: false});
 
 
@@ -103,8 +103,8 @@ export default function Post ({post}) {
     </div>
       {parse(html)}
       <section className="d-flex flex-column justify-content-between align-items-center m-4 bg-light text-center p-1 border border-dark" >
-      <Comments postObj={postObj}/>
-      <LoginModal loginModalOpen={loginModalOpen} setLoginModalOpen={setLoginModalOpen}/>
+      <Comments postObj={postObj} setLoginModalOpen={setLoginModalOpen}/>
+      <LoginRegModal loginModalOpen={loginModalOpen} setLoginModalOpen={setLoginModalOpen}/>
         </section>
       </>
     );
