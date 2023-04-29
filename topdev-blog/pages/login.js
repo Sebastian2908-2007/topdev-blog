@@ -4,6 +4,7 @@ import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import cookie from 'js-cookie';
 
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -64,26 +65,28 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='d-flex flex-column align-items-center mt-5' onSubmit={handleSubmit}>
       <label>
         Email:
+        </label>
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-      </label>
+      
       <br />
       <label>
         Password:
+        </label>
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-      </label>
+      
       <br />
-      <button type="submit">Log in</button>
+      <button className='p-1 rounded bg-success text-light' type="submit">Log in</button>
     </form>
   );
 };

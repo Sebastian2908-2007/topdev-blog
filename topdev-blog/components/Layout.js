@@ -7,7 +7,7 @@ const Layout = ({children}) => {
     <div className={styles.imgDiv}>
 <Image 
         src='/topdev-logo.png'
-        alt='crush it catering logo'
+        alt='TopDev logo'
         sizes="(max-width: 2560px) 22vw,"
         fill
     /> 

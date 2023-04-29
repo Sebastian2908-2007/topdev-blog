@@ -83,21 +83,23 @@ const submitEdit = async (comment,text) => {
 
 };
 
-useEffect(() =>  {console.log(userComment)},[userComment]);
+//useEffect(() =>  {console.log(userComment)},[userComment]);
     return(
         <>
         <h4>Comments</h4>
         {!openCommentForm ? 
-        <div>
-            <button className='rounded p-2 mb-3 ' onClick={() => commentFormHandler()}>
-                <span><u>Add Comment...</u></span>
+        <div className='w-100'>
+            <button className='border-0 p-2 mb-3 bg-light w-100' onClick={() => commentFormHandler()}>
+                <u className='w-100 text-primary'>Add Comment...</u>
             </button>
         </div>
         :
         <>
-        <textarea onChange={handleChange} name="text" className='rounded p-3 mb-4' placeholder='Add comment...'/>
-        <button onClick={() => submitComment()}>submit</button>
-        <button onClick={() => setOpenCommentForm(false)}>Cancel</button>
+        <textarea onChange={handleChange} name="text" className='rounded p-3 mb-2 w-100 border-light' placeholder='Add comment...'/>
+        <div className='d-flex flex-row justify-content-between mb-2 w-75'>
+        <button className='rounded p-1 text-white bg-primary' onClick={() => submitComment()}>submit</button>
+        <button className='rounded p-1 text-white bg-danger' onClick={() => setOpenCommentForm(false)}>Cancel</button>
+        </div>
         </>
         }
 

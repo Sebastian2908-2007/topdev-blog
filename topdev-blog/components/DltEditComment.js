@@ -6,13 +6,20 @@ const DltEditComment = ({comment,isLoggedIn,setIsEdit,setText,setCommentToEdit})
     const commentToDlt = comment._id;
     const blogPost = comment.blogPost;
     let editPriv= null;
-    const user_token = localStorage.getItem('user_token');
-    const decodedToken = jwt.decode(user_token);
-    const user = decodedToken.id;
+    let user_token = null; 
+    let decodedToken = null;
+    let user = null;
+    if(localStorage.getItem('user_token')) {
+     user_token = localStorage.getItem('user_token');
+     decodedToken = jwt.decode(user_token);
+     user = decodedToken.id;
+    };
     const commentUserId = comment.user._id;
+  
     if(user === commentUserId){
         editPriv = true;
     }
+  
     const deleteComment = async () => {
      const response = await fetch('/api/deleteComment',{
         method:'POST',
