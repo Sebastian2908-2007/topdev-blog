@@ -51,9 +51,9 @@ export default function Register() {
 
   return (
     <div>
-      <h1>Register</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
+      <h1 className='text-center mt-2'>Register</h1>
+      <form className='d-flex flex-column align-items-center mt-5'  onSubmit={handleSubmit}>
+        
         <label htmlFor="userName">UserName</label>
           <input
             type="userName"
@@ -70,8 +70,8 @@ export default function Register() {
             onChange={(event) => setEmail(event.target.value)}
             required
           />
-        </div>
-        <div>
+        
+        
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -80,8 +80,8 @@ export default function Register() {
             onChange={(event) => setPassword(event.target.value)}
             required
           />
-        </div>
-        <button type="submit">Register</button>
+        
+        <button className='p-1 rounded bg-success text-light mt-4' type="submit">Register</button>
       </form>
     </div>
   );

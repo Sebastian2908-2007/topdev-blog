@@ -37,9 +37,11 @@ const LoginModal = ({loginModalOpen,setLoginModalOpen}) => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [userName, setUserName] = useState('');
     const router = useRouter();
     const [lgnInSgnUp, setLgnSgnUp] = useState('signup');
-    const handleSubmit = async (e) => {
+
+    const handleLoginSubmit = async (e) => {
       e.preventDefault();
   
       // Authenticate user with email and password
@@ -63,6 +65,48 @@ const LoginModal = ({loginModalOpen,setLoginModalOpen}) => {
         console.log('Invalid email or password');
       };
     };
+
+
+    const handleRegisterSubmit = async (event) => {
+      event.preventDefault();
+  
+      try {
+         
+         //console.log(email,password);
+        const response = await fetch('/api/users', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, password, userName }),
+        });
+        console.log(response) ;
+  
+        if (response.ok) {
+            const data = await response.json();
+            const user = data.user;
+            const token = data.token;
+            localStorage.setItem('user_token', token);
+            const decodedToken = jwt.decode(token);
+            cookie.set("isAdmin",`${decodedToken.isAdmin}`, {expires:2/24});
+            cookie.set("isLoggedIn",true, {expires:2/24});
+         // if admin go to create post page else go home
+        if(!user.isAdmin){
+          router.push('/');
+        }else{
+        router.push('/createPost');
+        }
+         // alert(`Registration successful! Welcome`);
+        } else {
+          const { message } = await response.json();
+          alert(`Registration failed: ${message}`);
+        }
+      } catch (error) {
+        console.error(error);
+        alert('An error occurred. Please try again later.');
+      }
+    };
+
   
     const authenticateUser = async (email, password) => {
       // Get user from database
@@ -104,7 +148,7 @@ const LoginModal = ({loginModalOpen,setLoginModalOpen}) => {
                 {lgnInSgnUp === 'signup' ?
 
         (
-<form className='d-flex flex-column align-items-center' onSubmit={handleSubmit}>
+<form className='d-flex flex-column align-items-center' onSubmit={handleRegisterSubmit}>
         
         <label className='text-white' htmlFor="userName">UserName</label>
           <input
@@ -139,7 +183,7 @@ const LoginModal = ({loginModalOpen,setLoginModalOpen}) => {
       </form>
         )
         :
-        (<form className='d-flex flex-column align-items-center mt-2' onSubmit={handleSubmit}>
+        (<form className='d-flex flex-column align-items-center mt-2' onSubmit={handleLoginSubmit}>
         <label className='text-light'>
           Email:
           </label>

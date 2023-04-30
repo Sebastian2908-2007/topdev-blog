@@ -36,6 +36,9 @@ export default async function handler(req, res) {
 }
 else if (req.method === 'POST') {
     const { email, password, userName } = req.body;
+    console.log(email);
+    console.log(password);
+    console.log(userName);
     let isAdmin = false;
     if(email.split('@')[1] === process.env.IS_ADMIN) {
         isAdmin = true;

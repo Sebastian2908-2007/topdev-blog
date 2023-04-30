@@ -7,8 +7,14 @@
   background-color: black;
   color:rgb(61, 96, 152);
   padding:2%;
-
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
   width:100%
+}
+.dropDown{
+  padding-top: 5%;
+  padding-right: 2%
 }
 .footer{
   //background-color: white;
@@ -34,6 +40,17 @@
 @media screen and (min-width:1024px) {
   .imgDiv{
     width:8%;
+  }
+}
+
+@media screen and (min-width:540px) {
+  .dropDown{
+    padding-top:4%;
+  }
+}
+@media screen and (min-width:768px) {
+  .dropDown{
+    padding-top:5%;
   }
 }
 

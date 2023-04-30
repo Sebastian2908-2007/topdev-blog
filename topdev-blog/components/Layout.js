@@ -1,3 +1,4 @@
+import HeaderDropLeft from '@/components/HeaderDropList';
 import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
 const Layout = ({children}) => {
@@ -12,6 +13,7 @@ const Layout = ({children}) => {
         fill
     /> 
   </div>
+  <HeaderDropLeft/>
 </header>
 <main className={styles.main}>
     {children}
