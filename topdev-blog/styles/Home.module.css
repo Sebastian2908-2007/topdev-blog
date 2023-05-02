@@ -31,6 +31,11 @@
  height:20vh;
  width:50%;
 }
+.hero{
+ position: relative;
+ height:40vh;
+ width:100%;
+}
 .navLink{
   color: #F8E183;
   text-align: center;
@@ -46,11 +51,21 @@
   .imgDiv{
     width:15%;
   }
+  .aboutImg{
+    height:25vh;
+    width:50%;
+   }
 }
 @media screen and (min-width:1024px) {
   .imgDiv{
     width:8%;
   }
+  .aboutImg{
+    height:50vh;
+   }
+   .hero{
+    height:70vh
+   }
 }
 
 @media screen and (min-width:540px) {
