@@ -1,4 +1,5 @@
-import HeaderDropLeft from '@/components/HeaderDropList';
+import dynamic from 'next/dynamic';
+const HeaderDropLeft = dynamic(() =>import('@/components/HeaderDropList'),{ssr: false});
 import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
 const Layout = ({children}) => {

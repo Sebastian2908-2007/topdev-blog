@@ -14,7 +14,7 @@
 }
 .dropDown{
   padding-top: 5%;
-  padding-right: 2%
+  padding-right: 2%;
 }
 .footer{
   //background-color: white;
@@ -25,6 +25,16 @@
  position: relative;
  height:11vh;
  width:30%;
+}
+.aboutImg{
+ position: relative;
+ height:20vh;
+ width:50%;
+}
+.navLink{
+  color: #F8E183;
+  text-align: center;
+  text-decoration: none;
 }
 @media screen and (min-width:360px) {
   .imgDiv{

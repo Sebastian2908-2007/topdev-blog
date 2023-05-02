@@ -41,12 +41,12 @@ export default function Home() {
         my-3
         '
         >
-          Curious About Websites? 
+          Curious About Websites, Tech, and Life? 
           &nbsp;
            <small className='
            text-muted
            '>
-            TopDev Can help...
+            TopDev can help...
             </small>
           </h1>
         
