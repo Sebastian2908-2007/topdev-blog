@@ -10,6 +10,7 @@ const About = () => {
           alt="AI version of topdevs fearless founder"
           sizes="(max-width: 2560px) 22vw,"
           fill
+          priority={true}
         />
        </section>
        <section className="d-flex flex-row mt-5">
