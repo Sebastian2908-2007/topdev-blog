@@ -52,7 +52,7 @@ const About = () => {
         </div>
         <p className="w-50 p-2 border border rounded-start p-sm-5 text-white shadow-lg">
         Along with the effects this has on
-        our world our busineses and lives.
+        our world our businesses and our lives.
         </p>
        </section>
        </>

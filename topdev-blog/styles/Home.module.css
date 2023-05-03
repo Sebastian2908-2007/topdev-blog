@@ -55,21 +55,7 @@
     height:25vh;
     width:50%;
    }
-}
-@media screen and (min-width:1024px) {
-  .imgDiv{
-    width:8%;
-  }
-  .aboutImg{
-    height:50vh;
-   }
-   .hero{
-    height:70vh
-   }
-}
-
-@media screen and (min-width:540px) {
-  .dropDown{
+   .dropDown{
     padding-top:4%;
   }
 }
@@ -78,5 +64,23 @@
     padding-top:5%;
   }
 }
+@media screen and (min-width:1024px) {
+  .imgDiv{
+    width:8%;
+    height: 15vh;
+  }
+  .aboutImg{
+    height:60vh;
+   }
+   .hero{
+    height:80vh
+   }
+   .dropDown{
+    padding-top:2%;
+  }
+}
+
+
+
 
 
