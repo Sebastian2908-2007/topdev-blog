@@ -13,6 +13,10 @@ const blogPostSchema = new Schema({
         required: true,
         trim: true 
     },
+    category:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Category'
+    },
     html:{
         type: String,
         required: true,

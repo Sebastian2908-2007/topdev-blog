@@ -11,6 +11,7 @@ import Link from 'next/link';
 const HeaderDropList = () => {
   const [render,setRender] = useState(false);
   const isLoggedIn = cookie.get('isLoggedIn');
+  const isAdmin = cookie.get('isAdmin');
 
   const logout = () => {
     cookie.remove('isLoggedIn');
@@ -51,6 +52,7 @@ setTimeout(() => {setRender(false)},3000);
              {!isLoggedIn ? <Link className={styles.navLink} href='/login'>Login</Link>
              :
              <button className='bg-danger text-white' onClick={() => logout()}>Logout</button>}
+             {isLoggedIn && isAdmin ? <Link href='/adminDash' className={styles.navLink}>Dashboard</Link>:null}
               <Dropdown.Divider />
               <Link className={styles.navLink} href='/register'>Register</Link>
               </div>
