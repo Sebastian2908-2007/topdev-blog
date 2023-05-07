@@ -1,7 +1,10 @@
+import Link from "next/link";
+import { useEffect } from "react";
 import { useState } from "react";
 
 const AdminDash = ({isAdmin}) => {
    const [category,setCategory] = useState('');
+   const [users,setUsers] = useState(null);
 
 
 const submitCategory = async () => {
@@ -21,6 +24,22 @@ const submitCategory = async () => {
 }
 };
 
+useEffect(() => console.log(users),[users]);
+
+const getUsers = async () => {
+    if(users) {
+        setUsers(null);
+        return;
+    }
+    try{
+        const response = await fetch('/api/getAllUsers');
+        const userData = await response.json();
+        setUsers(userData);
+    }catch(e){
+        console.log('Client',e);
+    }
+};
+
     return(
         !isAdmin ? (
             <div>admins only</div>
@@ -33,8 +52,9 @@ const submitCategory = async () => {
              flex-column
              align-items-center
              justify-content-between
+             mt-3
             ">
-         <label htmlFor="categoryName" className="mb-2">Add Category</label>
+         <label htmlFor="categoryName" className="mb-3">Add Category</label>
          <input 
           onChange={(e) => setCategory(e.target.value)}
           type="text"
@@ -44,6 +64,16 @@ const submitCategory = async () => {
           />
          <button onClick={() => { submitCategory()}}  type="button" className="btn btn-primary w-50">Primary</button>
            </form>
+           <section className="d-flex flex-column align-items-center">
+            <Link className="text-center mt-3" href='/createPost'>Create Post</Link>
+            <button className="mt-3 btn btn-info w-75 text-white" onClick={() => getUsers()}>Users</button>
+            {users ? <section className="d-flex flex-column mt-3">{users.map(user => (
+                 <span
+                  key={user._id}
+                 className="text-white"
+                 >{user.email}</span>
+            ))}</section>:null}
+           </section>
             </>
         )
     );

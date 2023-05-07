@@ -6,13 +6,20 @@ import Link from 'next/link';
 
 export default function Home() {
   const [postData,setPostData] = useState(null);
+  const [categories,setCategories] = useState(null);
   async function getPosts() {
     const response = await fetch("api/getAllPosts");
     const jsonData = await response.json();
     setPostData(jsonData);
   }
+  const getCategories = async () => {
+    const response = await fetch('/api/getCategories');
+    const categoryData = await response.json();
+    setCategories(categoryData);
+  };
   useEffect(() => {
     getPosts();
+    getCategories();
   },[]);
   
   //console.log(cookie.get('isAdmin'));
@@ -26,6 +33,7 @@ export default function Home() {
       </Head>
   
     {!postData ? (<div>Loading...</div>):(
+      
       <section className='
       h-100  
       d-flex
@@ -34,7 +42,11 @@ export default function Home() {
       align-items-center
       pb-5
       '>
-
+        <section className='d-flex flex-wrap w-100'>
+     {categories ? (categories.map(category => (
+        <button className='flex-fill'  key={category._id}>{category.category}</button>
+      ))):(<div>no categories yet</div>)}
+      </section>
         <h1 className='
         display-4 
         text-center

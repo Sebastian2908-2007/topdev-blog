@@ -27,7 +27,7 @@ const Login = () => {
       if(!user.isAdmin){
         router.push('/');
       }else{
-      router.push('/createPost');
+      router.push('/adminDash');
       };
 
     } else {

@@ -7,7 +7,7 @@ import AddTitleModal from './AddTitleModal';
 
 const GrapesEditor = () => {
     const [editor,setEditor] = useState(null);
-    const [blogPost,setBlogPost] = useState({title:'',html:''});
+    const [blogPost,setBlogPost] = useState({title:'',html:'',category:''});
     
     useEffect(() => {
    const editor = gEditorConfig(setBlogPost);

@@ -72,7 +72,7 @@ export default function Post ({post}) {
   const [modalInfo,setModalInfo] = useState({});
   const [loginModalOpen,setLoginModalOpen] = useState(false);
   const postObj = JSON.parse(post);
-  console.log(postObj.title);
+  console.log(postObj.category);
  
     let html = postObj.html.replace(
       '<body ',
