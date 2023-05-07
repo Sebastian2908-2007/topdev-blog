@@ -62,7 +62,7 @@ const getUsers = async () => {
           id="categoryName"
           value={category}
           />
-         <button onClick={() => { submitCategory()}}  type="button" className="btn btn-primary w-50">Primary</button>
+         <button onClick={() => { submitCategory()}}  type="button" className="btn btn-primary w-50">Add Category</button>
            </form>
            <section className="d-flex flex-column align-items-center">
             <Link className="text-center mt-3" href='/createPost'>Create Post</Link>

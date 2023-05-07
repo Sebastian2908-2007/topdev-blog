@@ -7,6 +7,8 @@ import Link from 'next/link';
 export default function Home() {
   const [postData,setPostData] = useState(null);
   const [categories,setCategories] = useState(null);
+  const [postsToShow,setPostsToShow] = useState(null);
+  const [currentCategory,setCurrentCategory] = useState(null);
   async function getPosts() {
     const response = await fetch("api/getAllPosts");
     const jsonData = await response.json();
@@ -17,12 +19,27 @@ export default function Home() {
     const categoryData = await response.json();
     setCategories(categoryData);
   };
+  
+  const filterPosts = () => {
+    if(!currentCategory) {
+      console.log('Category no')
+      return postData;
+    }
+   const newPstData = postData.filter(post => 
+     post.category === currentCategory
+
+    );
+    console.log(newPstData);
+    return newPstData;
+  
+  };
+
   useEffect(() => {
     getPosts();
     getCategories();
   },[]);
-  
-  //console.log(cookie.get('isAdmin'));
+
+ //useEffect(() => postsToShow,[]);
   return (
     <>
       <Head>
@@ -43,9 +60,17 @@ export default function Home() {
       pb-5
       '>
         <section className='d-flex flex-wrap w-100'>
+          <button onClick={() => setCurrentCategory(null)} className="flex-fill category-btn">All Posts</button>
      {categories ? (categories.map(category => (
-        <button className='flex-fill'  key={category._id}>{category.category}</button>
-      ))):(<div>no categories yet</div>)}
+        <button 
+        onClick={() => setCurrentCategory(category._id)}
+        className='flex-fill category-btn'
+        key={category._id}>
+          {category.category}
+        </button>
+      )))
+      :
+      (<div>no categories yet</div>)}
       </section>
         <h1 className='
         display-4 
@@ -67,7 +92,7 @@ export default function Home() {
 
         {
           
-      postData.map((post) => (
+      filterPosts().map((post) => (
         <div className='
         col-12
          col-sm-6

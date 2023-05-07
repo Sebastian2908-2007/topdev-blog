@@ -92,3 +92,7 @@ a {
 #my-img{
   width:50%
 }
+.category-btn{
+  background: linear-gradient(to right,rgb(33, 43, 89),rgb(61, 96, 152));
+  color:#F8E183;
+}
