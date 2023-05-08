@@ -5,6 +5,7 @@ import { useState } from "react";
 const AdminDash = ({isAdmin}) => {
    const [category,setCategory] = useState('');
    const [users,setUsers] = useState(null);
+   const [categories,setCategories] = useState(null);
 
 
 const submitCategory = async () => {
@@ -39,6 +40,19 @@ const getUsers = async () => {
         console.log('Client',e);
     }
 };
+const getCategories = async () => {
+    if(categories) {
+        setCategories(null);
+        return;
+    }
+    try{
+        const response = await fetch('/api/getCategories');
+        const categoryData = await response.json();
+        setCategories(categoryData);
+    }catch(e){
+        console.log('Client',e);
+    }
+};
 
     return(
         !isAdmin ? (
@@ -62,7 +76,7 @@ const getUsers = async () => {
           id="categoryName"
           value={category}
           />
-         <button onClick={() => { submitCategory()}}  type="button" className="btn btn-primary w-50">Add Category</button>
+         <button onClick={() => { submitCategory()}}  type="button" className="btn btn-primary w-50">Add</button>
            </form>
            <section className="d-flex flex-column align-items-center">
             <Link className="text-center mt-3" href='/createPost'>Create Post</Link>
@@ -72,6 +86,17 @@ const getUsers = async () => {
                   key={user._id}
                  className="text-white"
                  >{user.email}</span>
+            ))}</section>:null}
+
+<button className="mt-3 btn btn-info w-75 text-white" onClick={() => getCategories()}>Categories</button>
+            {categories ? <section className="d-flex flex-column mt-3">{categories.map(category => (
+                <div key={category._id} className="d-flex flex-row">
+                 <span
+                 className="text-white"
+                 >{category.category}
+                 </span>
+                 <button>Delete</button>
+                 </div>
             ))}</section>:null}
            </section>
             </>

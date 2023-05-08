@@ -5,6 +5,7 @@ import SplitButton from 'react-bootstrap/SplitButton';
 import styles from '@/styles/Home.module.css';
 import { SSRProvider } from 'react-bootstrap';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 //#F8E183 yellow
 
 
@@ -12,11 +13,14 @@ const HeaderDropList = () => {
   const [render,setRender] = useState(false);
   const isLoggedIn = cookie.get('isLoggedIn');
   const isAdmin = cookie.get('isAdmin');
+  const router = useRouter();
 
   const logout = () => {
     cookie.remove('isLoggedIn');
+    cookie.remove('isAdmin');
     localStorage.removeItem('user_token');
     setRender(true);
+    router.push('/');
   };
 
 useEffect(() => {
