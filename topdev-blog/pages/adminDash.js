@@ -10,22 +10,38 @@ const AdminDash = ({isAdmin}) => {
 
 const submitCategory = async () => {
     try{
-    const response = await fetch('/api/addCategory',{
+    await fetch('/api/addCategory',{
         method:"POST",
         headers:{
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({category})
     });
-    const data = await response.json();
-    console.log(data);
+    
     setCategory('');
 }catch(e){
     console.log('submission problem',e);
 }
 };
 
-useEffect(() => console.log(users),[users]);
+const deleteCategory = async (e) => {
+    const categoryToDlt = e.target.getAttribute('data-category');
+    try{
+         await fetch('/api/deleteCategory',{
+            method:"POST",
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({category:categoryToDlt}),
+        });
+        
+        setCategories(null);
+    }catch(e){
+        console.log('submission problem',e);
+    }
+};
+
+useEffect(() => console.log(category),[category]);
 
 const getUsers = async () => {
     if(users) {
@@ -95,7 +111,7 @@ const getCategories = async () => {
                  className="text-white"
                  >{category.category}
                  </span>
-                 <button>Delete</button>
+                 <button onClick={(e) => {deleteCategory(e)}} data-category={category._id}>Delete</button>
                  </div>
             ))}</section>:null}
            </section>
