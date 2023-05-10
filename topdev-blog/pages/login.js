@@ -47,7 +47,7 @@ const Login = () => {
       }
     }
 
-    return null;
+   console.log('invalid credentials');
   };
 
   const getUserFromDatabase = async (email) => {

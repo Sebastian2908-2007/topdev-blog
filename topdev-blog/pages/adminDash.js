@@ -7,6 +7,7 @@ const AdminDash = ({isAdmin}) => {
    const [users,setUsers] = useState(null);
    const [categories,setCategories] = useState(null);
    const [blogPosts,setBlogPosts] = useState(null);
+   const [deleteCategoryErr,setDeleteCategoryErr] = useState(null);
 
 
 const submitCategory = async () => {
@@ -28,15 +29,20 @@ const submitCategory = async () => {
 const deleteCategory = async (e) => {
     const categoryToDlt = e.target.getAttribute('data-category');
     try{
-         await fetch('/api/deleteCategory',{
+       const response =  await fetch('/api/deleteCategory',{
             method:"POST",
             headers:{
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({category:categoryToDlt}),
         });
-        
+        if(response.status === 401) {
+        const data = await response.json();
+        console.log(data,"logging data");
+        setDeleteCategoryErr(data.message);
+        } 
         setCategories(null);
+        setTimeout(() => setDeleteCategoryErr(null),5000);
     }catch(e){
         console.log('submission problem',e);
     }
@@ -58,7 +64,7 @@ const deleteBlogPost = async (e) => {
     }
 };
 
-useEffect(() => console.log(category),[category]);
+useEffect(() => console.log(deleteCategoryErr),[deleteCategoryErr]);
 
 const getUsers = async () => {
     if(users) {
@@ -88,6 +94,10 @@ const getCategories = async () => {
 };
 
 const getBlogPosts = async () => {
+    if(blogPosts) {
+        setBlogPosts(null);
+        return;
+    }
     try{
         const response = await fetch('/api/getAllPosts');
         const postData = await response.json();
@@ -139,7 +149,7 @@ const getBlogPosts = async () => {
            text-white
            " onClick={() => getCategories()}
             >
-         Categories
+                {deleteCategoryErr ? deleteCategoryErr :'Categories'}
         </button>
             {categories ? <section className="d-flex flex-column mt-3">{categories.map(category => (
                 <div key={category._id} className="d-flex flex-row">
