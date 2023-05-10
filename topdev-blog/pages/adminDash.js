@@ -6,6 +6,7 @@ const AdminDash = ({isAdmin}) => {
    const [category,setCategory] = useState('');
    const [users,setUsers] = useState(null);
    const [categories,setCategories] = useState(null);
+   const [blogPosts,setBlogPosts] = useState(null);
 
 
 const submitCategory = async () => {
@@ -41,6 +42,22 @@ const deleteCategory = async (e) => {
     }
 };
 
+const deleteBlogPost = async (e) => {
+    const postToDlt = e.target.getAttribute('data-blogpost');
+    try{
+        await fetch('/api/deleteBlogPost',{
+            method: 'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({blogPost: postToDlt}),
+        });
+        setBlogPosts(null);
+    }catch(e){
+        console.log(e);
+    }
+};
+
 useEffect(() => console.log(category),[category]);
 
 const getUsers = async () => {
@@ -67,6 +84,16 @@ const getCategories = async () => {
         setCategories(categoryData);
     }catch(e){
         console.log('Client',e);
+    }
+};
+
+const getBlogPosts = async () => {
+    try{
+        const response = await fetch('/api/getAllPosts');
+        const postData = await response.json();
+        setBlogPosts(postData);
+    }catch(e){
+        console.log(e);
     }
 };
 
@@ -104,7 +131,16 @@ const getCategories = async () => {
                  >{user.email}</span>
             ))}</section>:null}
 
-<button className="mt-3 btn btn-info w-75 text-white" onClick={() => getCategories()}>Categories</button>
+        <button className="
+           mt-3
+           btn
+           btn-info
+           w-75
+           text-white
+           " onClick={() => getCategories()}
+            >
+         Categories
+        </button>
             {categories ? <section className="d-flex flex-column mt-3">{categories.map(category => (
                 <div key={category._id} className="d-flex flex-row">
                  <span
@@ -112,6 +148,27 @@ const getCategories = async () => {
                  >{category.category}
                  </span>
                  <button onClick={(e) => {deleteCategory(e)}} data-category={category._id}>Delete</button>
+                 </div>
+            ))}</section>:null}
+
+        <button className="
+           mt-3
+           btn
+           btn-info
+           w-75
+           text-white
+           " onClick={() => getBlogPosts()}
+            >
+         BlogPosts
+        </button>
+            {blogPosts ? <section className="d-flex flex-column mt-3">{blogPosts.map(blogPost => (
+                <div key={blogPost._id} className="d-flex flex-row">
+                 <span
+                 className="text-white"
+                 >
+                {blogPost.title}
+                 </span>
+                 <button onClick={(e) => {deleteBlogPost(e)}} data-blogpost={blogPost._id}>Delete</button>
                  </div>
             ))}</section>:null}
            </section>
