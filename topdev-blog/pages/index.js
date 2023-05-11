@@ -87,31 +87,34 @@ export default function Home() {
             </small>
           </h1>
         
-            <div className='container-fluid'>
-            <div className='row p-2'>
+            <div className='container p-4'>
+            <div className='row gy-3 gx-3'>
 
         {
           
       filterPosts().map((post) => (
         <div className='
         col-12
-         col-sm-6
-         col-md-4
-         col-lg-3
-         card
-         p-2
-         mb-2
-         d-flex
-         flex-column
-         justify-content-between
-         justify-content-stretch
-         align-items-center
+        col-sm-6
+        col-md-4
+        col-lg-3
          '
          key={post._id}
          >
-          <h2 className='text-center h4'>{post.title}</h2>
-          <span>{post.postDate}</span>
-          <Link href={`/blogpost/${post.title}`}>Enjoy Post</Link>
+          <div className='
+          card
+          p-2 
+          d-flex
+          flex-column
+          justify-content-between
+          justify-content-stretch
+          align-items-center
+          post-card
+          '>
+          <h2 className='text-center h4 text-white'>{post.title}</h2>
+          <span className='text-light'>{post.postDate.split('T')[0]}</span>
+          <Link className='postCardTitle' href={`/blogpost/${post.title}`}>Enjoy Post</Link>
+          </div>
         </div>
       ))
       }

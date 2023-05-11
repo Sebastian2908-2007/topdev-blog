@@ -125,13 +125,13 @@ const getBlogPosts = async () => {
          <input 
           onChange={(e) => setCategory(e.target.value)}
           type="text"
-          className="w-75 mb-3" 
+          className="w-50 mb-3" 
           id="categoryName"
           value={category}
           />
          <button onClick={() => { submitCategory()}}  type="button" className="btn btn-primary w-50">Add</button>
            </form>
-           <section className="d-flex flex-column align-items-center">
+           <section className="d-flex flex-column align-items-center pb-4">
             <Link className="text-center mt-3" href='/createPost'>Create Post</Link>
             <button className="mt-3 btn btn-info w-75 text-white" onClick={() => getUsers()}>Users</button>
             {users ? <section className="d-flex flex-column mt-3">{users.map(user => (
@@ -151,13 +151,13 @@ const getBlogPosts = async () => {
             >
                 {deleteCategoryErr ? deleteCategoryErr :'Categories'}
         </button>
-            {categories ? <section className="d-flex flex-column mt-3">{categories.map(category => (
-                <div key={category._id} className="d-flex flex-row">
+            {categories ? <section className="d-flex flex-column mt-3 w-50">{categories.map(category => (
+                <div key={category._id} className="d-flex flex-row w-100 justify-content-between mt-3">
                  <span
                  className="text-white"
                  >{category.category}
                  </span>
-                 <button onClick={(e) => {deleteCategory(e)}} data-category={category._id}>Delete</button>
+                 <button className="btn btn-danger p-1" onClick={(e) => {deleteCategory(e)}} data-category={category._id}>Delete</button>
                  </div>
             ))}</section>:null}
 
@@ -171,14 +171,14 @@ const getBlogPosts = async () => {
             >
          BlogPosts
         </button>
-            {blogPosts ? <section className="d-flex flex-column mt-3">{blogPosts.map(blogPost => (
-                <div key={blogPost._id} className="d-flex flex-row">
+            {blogPosts ? <section className="d-flex flex-column mt-3 w-75">{blogPosts.map(blogPost => (
+                <div key={blogPost._id} className="d-flex flex-row w-100 justify-content-between mt-3">
                  <span
                  className="text-white"
                  >
                 {blogPost.title}
                  </span>
-                 <button onClick={(e) => {deleteBlogPost(e)}} data-blogpost={blogPost._id}>Delete</button>
+                 <button className="btn btn-danger p-1" onClick={(e) => {deleteBlogPost(e)}} data-blogpost={blogPost._id}>Delete</button>
                  </div>
             ))}</section>:null}
            </section>

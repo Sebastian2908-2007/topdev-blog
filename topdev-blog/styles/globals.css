@@ -96,3 +96,14 @@ a {
   background: linear-gradient(to right,rgb(33, 43, 89),rgb(61, 96, 152));
   color:#F8E183;
 }
+
+.post-card{
+  background: linear-gradient(to right,rgb(33, 43, 89),rgb(61, 96, 152));
+  border: 2px solid #F8E183 !important;
+  height:100% !important;
+}
+
+.postCardTitle{
+  color: #F8E183
+}
+
