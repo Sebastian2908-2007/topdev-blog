@@ -8,6 +8,7 @@ import cookie from 'js-cookie';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [err,setErr] = useState(null);
   const router = useRouter();
 
   const handleSubmit = async (e) => {
@@ -31,7 +32,7 @@ const Login = () => {
       };
 
     } else {
-      console.log('Invalid email or password');
+     setTimeout(() => setErr(null),3000);
     };
   };
 
@@ -46,8 +47,8 @@ const Login = () => {
         return {user,token};
       }
     }
-
-   console.log('invalid credentials');
+    setErr('invalid credentials');
+return {user:null,token:null};
   };
 
   const getUserFromDatabase = async (email) => {
@@ -60,8 +61,8 @@ const Login = () => {
       const token = data.token;
       return {user, token};
     };
-
-    return null;
+    setErr('invalid credentials');
+    return {user:null,token:null};
   };
 
   return (
@@ -87,6 +88,7 @@ const Login = () => {
       
       <br />
       <button className='p-1 rounded bg-success text-light' type="submit">Log in</button>
+      {err ? <div className='text-danger mt-3'>{err}</div>:null}
     </form>
   );
 };

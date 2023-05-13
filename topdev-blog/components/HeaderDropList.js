@@ -58,7 +58,7 @@ setTimeout(() => {setRender(false)},3000);
              <button className='bg-danger text-white' onClick={() => logout()}>Logout</button>}
              {isLoggedIn && isAdmin ? <Link href='/adminDash' className={styles.navLink}>Dashboard</Link>:null}
               <Dropdown.Divider />
-              <Link className={styles.navLink} href='/register'>Register</Link>
+             {isLoggedIn ? null: <Link className={styles.navLink} href='/register'>Register</Link>}
               </div>
             </SplitButton>
  </div>

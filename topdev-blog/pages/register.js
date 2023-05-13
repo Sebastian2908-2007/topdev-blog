@@ -8,7 +8,7 @@ export default function Register() {
   const [password, setPassword] = useState('');
   const [userName, setUserName] = useState('');
   const router = useRouter();
-
+  const [err,setErr] = useState(null);
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -41,7 +41,8 @@ export default function Register() {
        // alert(`Registration successful! Welcome`);
       } else {
         const { message } = await response.json();
-        alert(`Registration failed: ${message}`);
+        setErr(`Registration failed: ${message}`);
+        setTimeout(() => setErr(null),3000);
       }
     } catch (error) {
       console.error(error);
@@ -82,6 +83,7 @@ export default function Register() {
           />
         
         <button className='p-1 rounded bg-success text-light mt-4' type="submit">Register</button>
+        {err ? <span className='text-danger'>{err}</span>:null}
       </form>
     </div>
   );
