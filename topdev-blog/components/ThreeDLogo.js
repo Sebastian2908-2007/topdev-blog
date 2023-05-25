@@ -1,7 +1,7 @@
 import { PerspectiveCamera } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useRef } from "react";
-
+import styles from '../styles/Home.module.css';
 function Cube() {
     const meshRef = useRef(null);
   
@@ -25,13 +25,16 @@ function Cube() {
 
 export default function ThreeDLogo  () {
 return(
+  <div id="my-div" className={styles.myDiv}>
     <Canvas
     camera={{
+      
         position: [0,0,5],
       }}>
         <ambientLight />
       <pointLight position={[10, 10, 10]} />
       <Cube />
     </Canvas>
+    </div>
 );
 };
