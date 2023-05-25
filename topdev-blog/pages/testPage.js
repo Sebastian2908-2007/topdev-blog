@@ -1,11 +1,13 @@
+import dynamic from "next/dynamic";
+const ThreeDLogo = dynamic(() => import("@/components/ThreeDLogo"),{ssr: false});
+//const R3fDemo = dynamic(() => import("@/components/ThreeDLogo"),{ssr: false});
+
 
 const TestPage = () => {
 
    
     return(
-        <section className="d-flex flex-column justify-content-between align-items-center m-4 bg-light text-center p-1 border border-dark">
-            <img className="img-fluid" src="/code.JPG"/>
-        </section>
+       <ThreeDLogo/>
     );
 };
 
