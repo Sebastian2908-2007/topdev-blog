@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
-const ThreeDLogo = dynamic(() => import("@/components/ThreeDLogo"),{ssr: false});
+//const ThreeDLogo = dynamic(() => import("@/components/ThreeDLogo"),{ssr: false});
+const ThreeDText = dynamic(() => import("@/components/ThreeDText"),{ssr: false});
 //const R3fDemo = dynamic(() => import("@/components/ThreeDLogo"),{ssr: false});
 
 
@@ -7,7 +8,7 @@ const TestPage = () => {
 
    
     return(
-       <ThreeDLogo/>
+       <ThreeDText/>
     );
 };
 

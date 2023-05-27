@@ -1,3 +1,5 @@
+import dynamic from "next/dynamic";
+const ThreeDLogo = dynamic(() => import("@/components/ThreeDLogo"),{ssr: false});
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -78,7 +80,7 @@ export default function Home() {
         my-3
         '
         >
-          Curious About Websites, Tech, and Life? 
+          Curious About Websites, Tech, and Life?   
           &nbsp;
            <small className='
            text-muted
@@ -86,6 +88,7 @@ export default function Home() {
             TopDev can help...
             </small>
           </h1>
+          <ThreeDLogo/>
         
             <div className='container p-4'>
             <div className='row gy-3 gx-3'>
