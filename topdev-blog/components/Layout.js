@@ -4,11 +4,13 @@ import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
 import {ImFacebook} from 'react-icons/im';
 import {FiTwitter,FiInstagram} from 'react-icons/fi';
+import Link from 'next/link';
 const Layout = ({children}) => {
     return(
 <>
 <header className={styles.header}>
-    <div className={styles.imgDiv}>
+    
+    <Link href='/' className={styles.imgDiv}>
 <Image 
         src='/topdev-logo.png'
         alt='TopDev logo'
@@ -16,7 +18,8 @@ const Layout = ({children}) => {
         fill
         priority={true}
     /> 
-  </div>
+  </Link>
+ 
   <HeaderDropLeft/>
 </header>
 <main className={styles.main}>
