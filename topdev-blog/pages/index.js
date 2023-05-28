@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 const ThreeDLogo = dynamic(() => import("@/components/ThreeDLogo"),{ssr: false});
+const ThreeDText = dynamic(() => import("@/components/ThreeDText"),{ssr: false});
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -74,6 +75,7 @@ export default function Home() {
       :
       (<div>no categories yet</div>)}
       </section>
+      <ThreeDText/>
         <h1 className='
         display-4 
         text-center

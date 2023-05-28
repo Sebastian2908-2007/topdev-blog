@@ -39,7 +39,7 @@ return(
     linear={true}
     camera={{position: [0,0,1000]}}
       >
-         <OrbitControls enablePan={true} enableZoom={true} enableRotate={true}/>
+         <OrbitControls enablePan={true} enableZoom={false} enableRotate={true}/>
         <ambientLight />
       <pointLight position={[10, 10, 10]} />
       <Cube />
