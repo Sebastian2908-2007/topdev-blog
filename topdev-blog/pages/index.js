@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 //import cookie from 'js-cookie';
+import Pagination from "@/components/Pagination";
+import { paginate } from "@/utils/paginate";
 
 
 export default function Home() {
@@ -12,6 +14,13 @@ export default function Home() {
   const [categories,setCategories] = useState(null);
   const [postsToShow,setPostsToShow] = useState(null);
   const [currentCategory,setCurrentCategory] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+ const pageSize = 10;
+
+ const handlePageChange = (page) => {
+  setCurrentPage(page);
+};
+
   async function getPosts() {
     const response = await fetch("api/getAllPosts");
     const jsonData = await response.json();
@@ -36,7 +45,10 @@ export default function Home() {
     return newPstData;
   
   };
-
+const filteredPosts= filterPosts();
+const paginatePosts = paginate(filteredPosts, currentPage, pageSize);
+console.log(paginatePosts);
+console.log(filterPosts);
   useEffect(() => {
     getPosts();
     getCategories();
@@ -97,7 +109,7 @@ export default function Home() {
 
         {
           
-      filterPosts().map((post) => (
+          paginatePosts.map((post) => (
         <div className='
         col-12
         col-sm-6
@@ -123,6 +135,12 @@ export default function Home() {
         </div>
       ))
       }
+      <Pagination
+        items={filteredPosts.length}
+        pageSize={pageSize}
+        currentPage={currentPage}
+        onPageChange={handlePageChange}
+      />
         </div>
        </div>
      
