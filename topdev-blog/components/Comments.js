@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import cookie from 'js-cookie';
 import jwt from 'jsonwebtoken';
 import dynamic from 'next/dynamic';
@@ -75,7 +75,6 @@ const submitEdit = async (comment,text) => {
         },
         body: JSON.stringify({comment,text}),
     });
-    console.log(response);
     window.location.reload();
     }catch(e){
         console.log(e);
@@ -83,7 +82,7 @@ const submitEdit = async (comment,text) => {
 
 };
 
-//useEffect(() =>  {console.log(userComment)},[userComment]);
+
     return(
         <>
         <h4>Comments</h4>

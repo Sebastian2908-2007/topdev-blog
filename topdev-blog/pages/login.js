@@ -39,7 +39,6 @@ const Login = () => {
   const authenticateUser = async (email, password) => {
     // Get user from database
     const {user,token} = await getUserFromDatabase(email);
-//console.log(user);
     if (user) {
       // Compare password with hashed password in database
       const match = await bcrypt.compare(password, user.password);

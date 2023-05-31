@@ -14,7 +14,7 @@ const HeaderDropList = () => {
   const isLoggedIn = cookie.get('isLoggedIn');
   const isAdmin = cookie.get('isAdmin');
   const router = useRouter();
-
+console.log(isAdmin);
   const logout = () => {
     cookie.remove('isLoggedIn');
     cookie.remove('isAdmin');
@@ -56,7 +56,7 @@ setTimeout(() => {setRender(false)},3000);
              {!isLoggedIn ? <Link className={styles.navLink} href='/login'>Login</Link>
              :
              <button className='bg-danger text-white' onClick={() => logout()}>Logout</button>}
-             {isLoggedIn && isAdmin ? <Link href='/adminDash' className={styles.navLink}>Dashboard</Link>:null}
+             {(isLoggedIn) && (isAdmin === 'true') ? <Link href='/adminDash' className={styles.navLink}>Dashboard</Link>:null}
               <Dropdown.Divider />
              {isLoggedIn ? null: <Link className={styles.navLink} href='/register'>Register</Link>}
               </div>

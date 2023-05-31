@@ -2,7 +2,6 @@ import dbConnect from "@/db/config/connection";
 import {BlogPost} from '../../db/models';
 
 export default async function handler(req, res) {
-  //console.log('IN ENDPOINT',req.body);
   try{ 
   await dbConnect();
   }catch(e) {

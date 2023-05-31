@@ -44,10 +44,9 @@ const DltEditComment = ({comment,isLoggedIn,setIsEdit,setText,setCommentToEdit})
                   <div className="d-flex flex-column">
                     <button 
                     data-comment = {comment._id}
-                    className="btn btn-light pt-0 px-0"
+                    className="btn btn-primary mb-2 pt-0 px-0"
                     onClick={(e) => {
                         const cmtToEdit = e.target.getAttribute('data-comment');
-                        console.log(cmtToEdit, comment._id);
                         if(cmtToEdit === comment._id) {
                         setIsEdit(true); setText(comment.text);setCommentToEdit(cmtToEdit);
                          }
@@ -57,7 +56,7 @@ const DltEditComment = ({comment,isLoggedIn,setIsEdit,setText,setCommentToEdit})
                     Edit
                 </button>
                     <button
-                      className="btn btn-light pt-0 px-0"
+                      className="btn btn-danger pt-0 px-0"
                       onClick={() => deleteComment()}
                       >
                         Delete

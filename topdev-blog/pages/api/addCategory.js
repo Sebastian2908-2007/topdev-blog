@@ -10,7 +10,6 @@ export default async function addCategory ({body},res) {
 
 try {
 const category = await Category.create(body);
-console.log(category);
 res.status(200).json(category);
 }catch(e){
     res.status(500).json({message:'internal server error'});

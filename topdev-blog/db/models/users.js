@@ -26,7 +26,6 @@ const userSchema = Schema({
 
 /* set up pre-save middleware to create a password */
 userSchema.pre('save', async function(next) {
-  console.log(this.password,'PRE');
   if (this.isNew || this.isModified('password')) {
       const saltRounds = 11;
       this.password = await bcrypt.hash(this.password, saltRounds)
@@ -35,6 +34,6 @@ userSchema.pre('save', async function(next) {
 });
 
 
-const User = mongoose.models.User || mongoose.model('User', userSchema);
+const User = mongoose.models.User || model('User', userSchema);
 
 module.exports = User;

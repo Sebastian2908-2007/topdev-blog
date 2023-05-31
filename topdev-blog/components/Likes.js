@@ -1,6 +1,5 @@
 import { useState } from "react";
 import jwt from 'jsonwebtoken';
-import LoginModal from "./LoginRegModal";
 const Likes = ({postObj,setLoginModalOpen}) => {
   const [likeCnt, setLikeCnt] = useState(postObj.likes.length);
   const userToken = localStorage.getItem('user_token');

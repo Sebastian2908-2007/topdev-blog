@@ -51,7 +51,6 @@ try{
     
     try{
       const postData = await BlogPost.findOne({title:postTitle}).populate('comments').populate({path:'comments',populate:'user'}).populate('likes');
-      //console.log(postData.comments);
       data = JSON.stringify(postData);
     }catch(e) {
   console.log(e);
@@ -71,9 +70,7 @@ export default function Post ({post}) {
   const [openShareModal,setOpenShareModal] = useState(false);
   const [modalInfo,setModalInfo] = useState({});
   const [loginModalOpen,setLoginModalOpen] = useState(false);
-  const postObj = JSON.parse(post);
-  console.log(postObj.category);
- 
+  const postObj = JSON.parse(post); 
     let html = postObj.html.replace(
       '<body ',
       '<section class="d-flex flex-column justify-content-between align-items-center m-4 bg-light text-center p-1 border border-dark" ');

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { useEffect } from "react";
 import { useState } from "react";
 
 const AdminDash = ({isAdmin}) => {
@@ -38,7 +37,6 @@ const deleteCategory = async (e) => {
         });
         if(response.status === 401) {
         const data = await response.json();
-        console.log(data,"logging data");
         setDeleteCategoryErr(data.message);
         } 
         setCategories(null);
@@ -63,8 +61,6 @@ const deleteBlogPost = async (e) => {
         console.log(e);
     }
 };
-
-useEffect(() => console.log(deleteCategoryErr),[deleteCategoryErr]);
 
 const getUsers = async () => {
     if(users) {

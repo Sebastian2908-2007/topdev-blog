@@ -12,7 +12,6 @@ export default async function deleteBlogPost({body},res) {
 
     try{
          postToDlt = await BlogPost.findOne({_id: body.blogPost});
-        console.log(postToDlt);
     }catch(e){
         console.log(e);
         return res.status(500).json({message:'internal server error blogpost find'});
@@ -24,8 +23,6 @@ export default async function deleteBlogPost({body},res) {
          {$pull:{blogPosts:postToDlt._id}},
          {new: true}
          );
-         console.log('Updated category',updated_category)
-
     }catch(e){
         console.log(e);
       return  res.status(500).json({message:'problem removing blogpost from category'});

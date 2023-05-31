@@ -21,7 +21,6 @@ export const addEditorCommand = (editor,htmlSetter) => {
     // Commands
     editor.Commands.add("export", {
      run: (editor) => {
-       console.log(editor.getHtml());
        htmlSetter({title:'some title',html:editor.getHtml()});
        editor.DomComponents.clear();
        editor.CssComposer.clear();

@@ -12,10 +12,9 @@ import { paginate } from "@/utils/paginate";
 export default function Home() {
   const [postData,setPostData] = useState(null);
   const [categories,setCategories] = useState(null);
-  const [postsToShow,setPostsToShow] = useState(null);
   const [currentCategory,setCurrentCategory] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
- const pageSize = 10;
+  const pageSize = 10;
 
  const handlePageChange = (page) => {
   setCurrentPage(page);
@@ -34,21 +33,17 @@ export default function Home() {
   
   const filterPosts = () => {
     if(!currentCategory) {
-      console.log('Category no')
       return postData;
     }
    const newPstData = postData.filter(post => 
      post.category === currentCategory
 
     );
-    console.log(newPstData);
     return newPstData;
   
   };
 const filteredPosts= filterPosts();
 const paginatePosts = paginate(filteredPosts, currentPage, pageSize);
-console.log(paginatePosts);
-console.log(filterPosts);
   useEffect(() => {
     getPosts();
     getCategories();

@@ -13,8 +13,6 @@ export default function Register() {
     event.preventDefault();
 
     try {
-       
-       //console.log(email,password);
       const response = await fetch('/api/users', {
         method: 'POST',
         headers: {
@@ -22,7 +20,6 @@ export default function Register() {
         },
         body: JSON.stringify({ email, password, userName }),
       });
-      console.log(response) ;
 
       if (response.ok) {
           const data = await response.json();

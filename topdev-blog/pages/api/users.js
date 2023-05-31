@@ -36,9 +36,6 @@ export default async function handler(req, res) {
 }
 else if (req.method === 'POST') {
     const { email, password, userName } = req.body;
-    console.log(email);
-    console.log(password);
-    console.log(userName);
     let isAdmin = false;
     if(email.split('@')[1] === process.env.IS_ADMIN) {
         isAdmin = true;
@@ -51,7 +48,6 @@ else if (req.method === 'POST') {
       };
 
       const user = await User.create({email:email, password:password, isAdmin:isAdmin, userName: userName });
-      console.log(user);
       const token = jwt.sign(
         {
           id: user.id,

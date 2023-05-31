@@ -13,7 +13,6 @@ export default async function editComment({body},res) {
             {text: body.text}
             );
            res.status(200).json(updatedCmt); 
-           console.log(updatedCmt,"UC");
         }catch(e){
             console.log(e);
             res.status(500).json({message:'internal server error comment'});

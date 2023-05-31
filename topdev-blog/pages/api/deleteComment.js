@@ -2,8 +2,6 @@ import dbConnect from '@/db/config/connection';
 import {Comment,BlogPost} from '@/db/models';
 
 export default async function deleteComment({body},res) {
-    console.log(body,"incoming body");
-
     try{
      await dbConnect();
     }
@@ -18,7 +16,6 @@ export default async function deleteComment({body},res) {
         {$pull: {comments:body.comment}},
         {new: true}
       );
-      console.log('UBP',updatedBlogPost);
     }catch(e){
         console.log(e);
         res.staus(500).json({message:'internal server error BP'});
@@ -26,7 +23,6 @@ export default async function deleteComment({body},res) {
 
     try{
      const deletedComment = await Comment.findOneAndDelete({_id: body.comment});
-     console.log('DC',deletedComment);
      res.status(200).json(deletedComment);
     }catch(e){
         console.log(e);

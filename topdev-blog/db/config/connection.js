@@ -27,7 +27,7 @@ async function dbConnect() {
   if (!cached.promise) {
     const opts = {
       /**below should be set false in dev but true in production */
-       bufferCommands: false,
+       bufferCommands: true,
       //bufferCommands: true,
     }
 
@@ -42,7 +42,6 @@ async function dbConnect() {
     cached.promise = null
     throw e
   }
-  //console.log('http://localhost:3000//api/graphql');
   return cached.conn
 }
 
