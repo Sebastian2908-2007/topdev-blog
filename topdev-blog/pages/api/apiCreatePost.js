@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import dbConnect from "@/db/config/connection";
-import {BlogPost,Category} from '../../db/models';
+import {BlogPost,Category} from '@/db/models';
 
 export default async function handler({body}, res) {
  let category;

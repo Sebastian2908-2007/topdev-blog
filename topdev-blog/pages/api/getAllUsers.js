@@ -1,5 +1,5 @@
 import dbConnect from "@/db/config/connection";
-import {User} from '../../db/models';
+import {User} from '@/db/models';
 
 export default async function getAllUsers(req,res) {
   try{

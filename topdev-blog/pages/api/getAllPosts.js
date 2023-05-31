@@ -1,5 +1,5 @@
 import dbConnect from "@/db/config/connection";
-import {BlogPost} from '../../db/models';
+import {BlogPost} from '@/db/models';
 
 export default async function handler(req, res) {
   try{ 
