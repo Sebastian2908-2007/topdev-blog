@@ -3,20 +3,12 @@ import Modal from 'react-bootstrap/Modal';
 import { useState, useEffect } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 function AddTitleModal({setBlogPost,blogPost}) {
 
   const [show, setShow] = useState(false);
   const [categories,setCategories] = useState(null);
-
-  const handleSubmit = () => {
-    fetch('api/apiCreatePost',{
-        method:'POST',
-        body: JSON.stringify(blogPost),
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-    });
-   
-};
 
 const getCategories = async () => {
   if(categories) {
@@ -43,8 +35,17 @@ setBlogPost({
 });
 };
 
-  const handleClose = () => {setShow(false);handleSubmit()};
-  const handleShow = () => {setShow(true);}
+  const handleClose = () => {setShow(false);};
+  const handleShow = () => {setShow(true);};
+
+  const handleSubmit = () => {
+    fetch('api/apiCreatePost',{
+        method:'POST',
+        body: JSON.stringify(blogPost),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+    });
+    handleClose();
+  };
 
   return (
     <>
@@ -54,39 +55,42 @@ setBlogPost({
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Enter blogpost Title</Modal.Title>
+          <Modal.Title className='w-100 text-center' >Enter blogpost Title</Modal.Title>
         </Modal.Header>
-        <Modal.Body><input onChange={handleChange} name='title'/></Modal.Body>
+        <Modal.Body className='d-flex flex-row justify-content-between'>
+          <input className='title-input' onChange={handleChange} name='title'/>
         
       <DropdownButton
+       as={ButtonGroup}
         id="dropdown-button-dark-example2"
         variant="secondary"
         menuVariant="dark"
-        title="Dropdown button"
+        title="Category"
         className="mt-2"
+        onSelect={(e) => {setBlogPost({
+          ...blogPost,
+          category: e
+         })}} 
       >
         <div className='d-flex flex-column'>
         {categories ? (categories.map(category => (
-           <button 
-           className='text-white bg-transparent border-0'
-           onClick={(e) => {setBlogPost({
-            ...blogPost,
-            category: e.target.value
-           })}} 
-           value={category.category} 
+           <Dropdown.Item
+           className='cat-button'
+           eventKey={category.category} 
            key={category._id}
            >
             {category.category}
-          </button>
+          </Dropdown.Item>
         ))):(<span>Separated link</span>)}
         </div>
         
       </DropdownButton>
-      <Modal.Footer>
+      </Modal.Body>
+      <Modal.Footer className='d-flex flex-row justify-content-between'>
           <Button variant="danger" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" onClick={handleSubmit}>
             Submit Post
           </Button>
         </Modal.Footer>
