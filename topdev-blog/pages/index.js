@@ -53,7 +53,7 @@ const paginatePosts = paginate(filteredPosts, currentPage, pageSize);
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>TopDev Blog</title>
         <meta name="description" content="A Blog for all things tech and then some" />
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
         <link rel="icon" href="/topdev-logo.png" />
