@@ -19,7 +19,13 @@ export default async function handler({body}, res) {
   };
 
   try{
-    const myPost = await BlogPost.create({title:body.title,html:body.html,category: category._id});
+    const myPost = await BlogPost.create({
+      title:body.title,
+      html:body.html,
+      category: category._id,
+      metaDescription: body.metaDescription,
+      keywords: body.keywords
+    });
 
     await Category.findOneAndUpdate(
       {_id: category._id},

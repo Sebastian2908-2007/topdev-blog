@@ -1,13 +1,13 @@
 import { gEditorConfig } from '@/utils/editorConfig';
 import { useEffect,useState } from 'react';
-import AddTitleModal from './AddTitleModal';
+import AddMetaDataModal from './AddMetaDataModal';
 
 
   
 
 const GrapesEditor = () => {
     const [editor,setEditor] = useState(null);
-    const [blogPost,setBlogPost] = useState({title:'',html:'',category:''});
+    const [blogPost,setBlogPost] = useState({title:'',html:'',category:'',metaDescription:'',keywords:''});
     
     useEffect(() => {
    const editor = gEditorConfig(setBlogPost);
@@ -24,7 +24,7 @@ const GrapesEditor = () => {
    
 <div id="editor"></div>
  
-<AddTitleModal setBlogPost={setBlogPost} blogPost={blogPost}/>
+<AddMetaDataModal setBlogPost={setBlogPost} blogPost={blogPost}/>
    </>
    );
 };

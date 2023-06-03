@@ -1,11 +1,11 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
-function AddTitleModal({setBlogPost,blogPost}) {
+function AddMetaDataModal({setBlogPost,blogPost}) {
 
   const [show, setShow] = useState(false);
   const [categories,setCategories] = useState(null);
@@ -46,7 +46,7 @@ setBlogPost({
     });
     handleClose();
   };
-
+useEffect(() => console.log(blogPost),[blogPost]);
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
@@ -57,8 +57,13 @@ setBlogPost({
         <Modal.Header closeButton>
           <Modal.Title className='w-100 text-center' >Enter blogpost Title</Modal.Title>
         </Modal.Header>
-        <Modal.Body className='d-flex flex-row justify-content-between'>
+        <Modal.Body className='d-flex flex-column justify-content-between text-center'>
+          <label htmlFor='title'>Title</label>
           <input className='title-input' onChange={handleChange} name='title'/>
+          <label htmlFor='metaDescription'>Meta Description</label>
+          <textarea className='title-input' onChange={handleChange} name='metaDescription'/>
+          <label htmlFor='keywords'>Keywords</label>
+          <input className='title-input' onChange={handleChange} name='keywords'/>
         
       <DropdownButton
        as={ButtonGroup}
@@ -99,4 +104,4 @@ setBlogPost({
   );
 }
 
-export default AddTitleModal;
+export default AddMetaDataModal;

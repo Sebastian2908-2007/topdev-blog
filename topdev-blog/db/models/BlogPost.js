@@ -22,6 +22,16 @@ const blogPostSchema = new Schema({
         required: true,
         trim: true 
     },
+    metaDescription:{
+        type: String,
+        required: true,
+        trim: true
+    },
+    keywords:{
+        type: String,
+        required: true,
+        trim: true
+    },
     comments:[{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Comment'
