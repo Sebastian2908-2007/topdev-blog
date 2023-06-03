@@ -123,7 +123,7 @@ const paginatePosts = paginate(filteredPosts, currentPage, pageSize);
           align-items-center
           post-card
           '>
-          <h2 className='text-center h4 text-white'>{post.title}</h2>
+          <h2 className='text-center h4 text-white'>{post.title.replace(/-/g, ' ')}</h2>
           <span className='text-light'>{post.postDate.split('T')[0]}</span>
           <Link className='postCardTitle' href={`/blogpost/${post.title}`}>Enjoy Post</Link>
           </div>

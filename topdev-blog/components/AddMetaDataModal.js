@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
@@ -46,7 +46,7 @@ setBlogPost({
     });
     handleClose();
   };
-useEffect(() => console.log(blogPost),[blogPost]);
+
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
