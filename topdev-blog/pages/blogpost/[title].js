@@ -83,6 +83,7 @@ export default function Post ({post}) {
      <meta charSet="utf-8" />
      <title>{postObj.title}</title>
      <link rel="icon" href='/topdev-logo.png' />
+     <meta name="title" content={postObj.title} />
      <meta name="description" content={postObj.metaDescription} />
      <meta name="keywords" content={postObj.keywords}></meta>
     </Head>
