@@ -17,11 +17,24 @@ export const panels = {
 
 };
 
-export const addEditorCommand = (editor,htmlSetter) => {
+export const addEditorCommand = (editor,setThumbNail,htmlSetter) => {
     // Commands
     editor.Commands.add("export", {
      run: (editor) => {
        htmlSetter({title:'some title',html:editor.getHtml()});
+      
+       editor.DomComponents.clear();
+       editor.CssComposer.clear();
+      },
+    });
+    editor.Commands.add("getimage", {
+     run: (editor) => {
+       //htmlSetter({title:'some title',html:editor.getHtml()});
+       const rawHtml = editor.getHtml();
+       //console.log(rawHtml.match(/<img[^>]+src="data([^">]+)/g)[0] + '"/>');
+       const thumbNail = rawHtml.match(/<img[^>]+src="data([^">]+)/g)[0]  + '"/>';
+       setThumbNail(thumbNail);
+       console.log(thumbNail);
        editor.DomComponents.clear();
        editor.CssComposer.clear();
       },
@@ -43,6 +56,11 @@ export const addEditorCommand = (editor,htmlSetter) => {
     id: "export",
     className: "fa fa-download",
     command: "export",
+  },
+{
+    id: "getimage",
+    className: "fa fa-picture-o",
+    command: "getimage",
   }
 ]
 }

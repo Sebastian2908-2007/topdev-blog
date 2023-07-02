@@ -5,7 +5,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
-function AddMetaDataModal({setBlogPost,blogPost}) {
+function AddMetaDataModal({setBlogPost,blogPost,thumbNail}) {
 
   const [show, setShow] = useState(false);
   const [categories,setCategories] = useState(null);
@@ -39,9 +39,11 @@ setBlogPost({
   const handleShow = () => {setShow(true);};
 
   const handleSubmit = () => {
+    
+  
     fetch('api/apiCreatePost',{
         method:'POST',
-        body: JSON.stringify(blogPost),
+        body: JSON.stringify({...blogPost, thumbNail:thumbNail}),
         headers: { "Content-Type": "application/json", Accept: "application/json" },
     });
     handleClose();

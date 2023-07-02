@@ -7,14 +7,15 @@ import AddMetaDataModal from './AddMetaDataModal';
 
 const GrapesEditor = () => {
     const [editor,setEditor] = useState(null);
-    const [blogPost,setBlogPost] = useState({title:'',html:'',category:'',metaDescription:'',keywords:''});
+    const [blogPost,setBlogPost] = useState({title:'',html:'',category:'',metaDescription:'',keywords:'',thumbNail:''});
+    const [thumbNail,setThumbNail] = useState('');
     
     useEffect(() => {
-   const editor = gEditorConfig(setBlogPost);
+   const editor = gEditorConfig(setThumbNail,setBlogPost);
    setEditor(editor);
     }, []);
    
-  
+  useEffect(() => {console.log(blogPost,"FRESH")},[blogPost])
   
 
 
@@ -24,7 +25,7 @@ const GrapesEditor = () => {
    
 <div id="editor"></div>
  
-<AddMetaDataModal setBlogPost={setBlogPost} blogPost={blogPost}/>
+<AddMetaDataModal setBlogPost={setBlogPost} blogPost={blogPost} thumbNail={thumbNail}/>
    </>
    );
 };

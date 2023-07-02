@@ -32,6 +32,9 @@ const blogPostSchema = new Schema({
         required: true,
         trim: true
     },
+    thumbNail:{
+        type: String,
+    },
     comments:[{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Comment'

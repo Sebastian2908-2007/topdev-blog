@@ -3,6 +3,7 @@ import dbConnect from "@/db/config/connection";
 import {BlogPost,Category} from '@/db/models';
 
 export default async function handler({body}, res) {
+  console.log(body,'IN API');
  let category;
   try{ 
   await dbConnect();
@@ -24,7 +25,8 @@ export default async function handler({body}, res) {
       html:body.html,
       category: category._id,
       metaDescription: body.metaDescription,
-      keywords: body.keywords
+      keywords: body.keywords,
+      thumbNail: body.thumbNail
     });
 
     await Category.findOneAndUpdate(

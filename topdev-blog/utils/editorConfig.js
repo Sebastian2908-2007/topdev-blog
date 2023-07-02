@@ -3,7 +3,7 @@ import grapesjs from 'grapesjs';
 import grapesJsPresetWebpage from 'grapesjs-preset-webpage';
 import { addEditorCommand,addPanels } from "./gEditorUtils";
 
-export const gEditorConfig = (htmlSetter) => {
+export const gEditorConfig = (previousData,htmlSetter) => {
     const editor = grapesjs.init({
      
         blockManager: {
@@ -774,7 +774,7 @@ export const gEditorConfig = (htmlSetter) => {
           //panels: { defaults: [] },
         });
         
-        addEditorCommand(editor,htmlSetter);
+        addEditorCommand(editor,previousData,htmlSetter);
         //addPanels(panels,editor);
   addPanels(editor);
 
