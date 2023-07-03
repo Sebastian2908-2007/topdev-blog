@@ -28,7 +28,7 @@ export default async function handler({body}, res) {
       keywords: body.keywords,
       thumbNail: body.thumbNail
     });
-
+console.log(myPost,"MY POST");
     await Category.findOneAndUpdate(
       {_id: category._id},
       {$push: {blogPosts: myPost._id}}

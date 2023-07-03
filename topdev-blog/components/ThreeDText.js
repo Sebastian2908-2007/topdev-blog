@@ -4,10 +4,19 @@ import { OrbitControls, useGLTF } from '@react-three/drei'
 
 
 function Model(props) {
+  const meshRef = useRef(null);
+  useFrame(() => {
+    if (!meshRef.current) {
+      return;
+    }
+   
+    meshRef.current.rotation.z += 0.014
+ 
+  });
   const { nodes, materials } = useGLTF('/td-text.glb')
   return (
     <group {...props} dispose={null}>
-      <group rotation={[-Math.PI / 2, 0, 0]} scale={1}>
+      <group ref={meshRef} rotation={[-Math.PI / 2, 0, 0]} scale={1}>
         <mesh geometry={nodes['3D_Text_-_T'].geometry} material={materials.Lifeline} position={[-16.11, 1.57, 1.99]} scale={0.21} />
         <mesh geometry={nodes['3D_Text_-_o'].geometry} material={materials.Lifeline} position={[-10.6, 1.57, 1.99]} scale={0.21} />
         <mesh geometry={nodes['3D_Text_-_p'].geometry} material={materials.Lifeline} position={[-5.59, 1.57, 1.99]} scale={0.21} />

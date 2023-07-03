@@ -7,6 +7,7 @@ import Link from 'next/link';
 //import cookie from 'js-cookie';
 import Pagination from "@/components/Pagination";
 import { paginate } from "@/utils/paginate";
+import parse from 'html-react-parser';
 
 
 export default function Home() {
@@ -48,7 +49,6 @@ const paginatePosts = paginate(filteredPosts, currentPage, pageSize);
     getPosts();
     getCategories();
   },[]);
-
  //useEffect(() => postsToShow,[]);
   return (
     <>
@@ -82,22 +82,25 @@ const paginatePosts = paginate(filteredPosts, currentPage, pageSize);
       :
       (<div>no categories yet</div>)}
       </section>
-      <ThreeDText/>
+      
         <h1 className='
         display-4 
         text-center
         my-3
+        text-light
         '
         >
           Curious About Websites, Tech, and Life?   
           &nbsp;
            <small className='
-           text-muted
+        
+           home-text
            '>
             TopDev can help...
             </small>
           </h1>
           <ThreeDLogo/>
+          <ThreeDText/>
         
             <div className='container p-4'>
             <div className='row gy-3 gx-3'>
@@ -123,6 +126,9 @@ const paginatePosts = paginate(filteredPosts, currentPage, pageSize);
           align-items-center
           post-card
           '>
+                  <section>
+      {parse(post.thumbNail)}
+            </section>
           <h2 className='text-center h4 text-white'>{post.title.replace(/-/g, ' ')}</h2>
           <span className='text-light'>{post.postDate.split('T')[0]}</span>
           <Link className='postCardTitle' href={`/blogpost/${post.title}`}>Enjoy Post</Link>

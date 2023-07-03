@@ -26,15 +26,15 @@ const Layout = ({children}) => {
     {children}
 </main>
 <footer className={styles.footer}>
-<span className=''>&copy; TopDev.Blog {new Date().getFullYear()}</span>
+<span className='text-light'>&copy; TopDev.Blog {new Date().getFullYear()}</span>
 <div className='d-flex flex-row justify-content-between align-items-center w-25'>
-            <a className='' href='https://www.facebook.com/topdev11' target='_blank'  rel="noopener noreferrer">
+            <a className='footerSocial' href='https://www.facebook.com/topdev11' target='_blank'  rel="noopener noreferrer">
             <ImFacebook/>
             </a>
-            <a className='' href='https://www.instagram.com/topdev.tech/' target='_blank'  rel="noopener noreferrer">
+            <a className='footerSocial' href='https://www.instagram.com/topdev.tech/' target='_blank'  rel="noopener noreferrer">
             <FiInstagram/>
             </a>
-            <a className='' href='https://twitter.com/topdev_tech' target='_blank'  rel="noopener noreferrer">
+            <a className='footerSocial' href='https://twitter.com/topdev_tech' target='_blank'  rel="noopener noreferrer">
             <FiTwitter/>
             </a>
         </div>

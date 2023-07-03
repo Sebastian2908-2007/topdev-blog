@@ -16,7 +16,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                     <path d="M8.5,13.5L11,16.5L14.5,12L19,18H5M21,19V5C21,3.89 20.1,3 19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19Z" />
                 </svg>`,
                 // Use `image` component
-                content: { type: 'image' },
+                content: `<img class="thumbImg"/>`,
                 // The component `image` is activatable (shows the Asset Manager).
                 // We want to activate it once dropped in the canvas.
                 activate: true,
@@ -71,7 +71,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 label: 'Link',
                
                 // Use `image` component
-                content: `<a href="https://topdev.tech/signup" target="_blank" class="mb-3">link txt</a>`,
+                content: `<a href="https://topdev.tech/pricing" target="_blank" class="mb-3">link txt</a>`,
                 // The component `image` is activatable (shows the Asset Manager).
                 // We want to activate it once dropped in the canvas.
                 activate: true,
@@ -126,28 +126,28 @@ export const gEditorConfig = (previousData,htmlSetter) => {
             <p class="mb-5">
             paragraph
              <br/>
-             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>     
+             <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>     
             </p>
             
             <p class="mb-5">
             paragraph
              <br/>
-             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+             <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
             <p class="mb-5">
             paragraph  
              <br/>
-             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>   
+             <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>   
             </p>
             <p class="mb-5">
             paragraph
              <br/>
-             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+             <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
             <p class="mb-5">
             paragraph
              <br/>
-             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+             <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
        
             
@@ -155,28 +155,28 @@ export const gEditorConfig = (previousData,htmlSetter) => {
             <p class="mb-5">
             paragraph 
              <br/>
-             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>     
+             <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>     
             </p>
             
             <p class="mb-5">
             paragraph
              <br/>
-             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+             <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
             <p class="mb-5">
             paragraph
              <br/>
-             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>   
+             <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>   
             </p>
             <p class="mb-5">
             paragraph
              <br/>
-             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+             <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
             <p class="mb-5">
             paragraph
              <br/>
-             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+             <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
        
             
@@ -184,28 +184,28 @@ export const gEditorConfig = (previousData,htmlSetter) => {
             <p class="mb-5">
             paragraph
              <br/>
-             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>     
+             <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>     
             </p>
             
             <p class="mb-5">
             paragraph
              <br/>
-             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+             <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
             <p class="mb-5">
             paragraph 
              <br/>
-             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>   
+             <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>   
             </p>
             <p class="mb-5">
             paragraph
              <br/>
-             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+             <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
             <p class="mb-5">
             paragraph
              <br/>
-             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+             <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
        
             
@@ -213,28 +213,28 @@ export const gEditorConfig = (previousData,htmlSetter) => {
             <p class="mb-5">
             paragraph 
              <br/>
-             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>     
+             <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>     
             </p>
             
             <p class="mb-5">
             paragraph
              <br/>
-             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+             <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
             <p class="mb-5">
             paragraph
              <br/>
-             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>   
+             <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>   
             </p>
             <p class="mb-5">
             paragraph
              <br/>
-             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+             <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
             <p class="mb-5">
             paragraph
              <br/>
-             <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+             <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
             </p>
                 `,
                 // The component `image` is activatable (shows the Asset Manager).
@@ -254,140 +254,140 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="text-center mb-3">
              Paragraph
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
                 </p>
                 <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
                 <h3 class=" mb-3">H3 sub sub Heading</h3>
                 <p class="text-center mb-3">
              Paragraph
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
                 </p>
                 <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
                 <h3 class=" mb-3">H3 sub sub Heading</h3>
                 <p class="text-center mb-3">
              Paragraph
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
                 </p>
                 <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
                 <h3 class=" mb-3">H3 sub sub Heading</h3>
                 <p class="text-center mb-3">
              Paragraph
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
                 </p>
                 <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
                 <h3 class=" mb-3">H3 sub sub Heading</h3>
                 <p class="text-center mb-3">
              Paragraph
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
                 </p>
                 <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
                 <h3 class=" mb-3">H3 sub sub Heading</h3>
                 <p class="text-center mb-3">
              Paragraph
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
                 </p>
                 <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
                 <h3 class=" mb-3">H3 sub sub Heading</h3>
                 <p class="text-center mb-3">
              Paragraph
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
                 </p>
                 <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
                 <h3 class=" mb-3">H3 sub sub Heading</h3>
                 <p class="text-center mb-3">
              Paragraph
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
                 </p>
                 <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
                 <h3 class=" mb-3">H3 sub sub Heading</h3>
                 <p class="text-center mb-3">
              Paragraph
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
                 </p>
                 <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
                 <h3 class=" mb-3">H3 sub sub Heading</h3>
                 <p class="text-center mb-3">
              Paragraph
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
                 </p>
                 <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
                 <h3 class=" mb-3">H3 sub sub Heading</h3>
                 <p class="text-center mb-3">
              Paragraph
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
                 </p>
                 <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
                 <h3 class=" mb-3">H3 sub sub Heading</h3>
                 <p class="text-center mb-3">
              Paragraph
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
                 </p>
                 <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
                 <h3 class=" mb-3">H3 sub sub Heading</h3>
                 <p class="text-center mb-3">
              Paragraph
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
                 </p>
                 <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
                 <h3 class=" mb-3">H3 sub sub Heading</h3>
                 <p class="text-center mb-3">
              Paragraph
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
                 </p>
                 <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
                 <h3 class=" mb-3">H3 sub sub Heading</h3>
                 <p class="text-center mb-3">
              Paragraph
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
                 </p>
                 <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
                 <h3 class=" mb-3">H3 sub sub Heading</h3>
                 <p class="text-center mb-3">
              Paragraph
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
                 </p>
                 <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
                 <h3 class=" mb-3">H3 sub sub Heading</h3>
                 <p class="text-center mb-3">
              Paragraph
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
                 </p>
                 <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
                 <h3 class=" mb-3">H3 sub sub Heading</h3>
                 <p class="text-center mb-3">
              Paragraph
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
                 </p>
                 <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
                 <h3 class=" mb-3">H3 sub sub Heading</h3>
                 <p class="text-center mb-3">
              Paragraph
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
                 </p>
                 <h2 class="mt-3 mb-3">H2 Sub Heading</h2>
                 <h3 class=" mb-3">H3 sub sub Heading</h3>
                 <p class="text-center mb-3">
              Paragraph
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>
                 </p>
                 `, 
                   // The component `image` is activatable (shows the Asset Manager).
@@ -406,7 +406,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
                 </p>
        
                 <h3 class="mb-3">sub sub title</h3>
@@ -424,7 +424,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
                 </p>
        
                 <h3 class="mb-3">sub sub title</h3>
@@ -442,7 +442,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
                 </p>
        
                 <h3 class="mb-3">sub sub title</h3>
@@ -460,7 +460,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
                 </p>
        
                 <h3 class="mb-3">sub sub title</h3>
@@ -478,7 +478,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
                 </p>
        
                 <h3 class="mb-3">sub sub title</h3>
@@ -496,7 +496,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
                 </p>
        
                 <h3 class="mb-3">sub sub title</h3>
@@ -514,7 +514,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
                 </p>
        
                 <h3 class="mb-3">sub sub title</h3>
@@ -532,7 +532,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
                 </p>
        
                 <h3 class="mb-3">sub sub title</h3>
@@ -550,7 +550,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
                 </p>
        
                 <h3 class="mb-3">sub sub title</h3>
@@ -568,7 +568,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
                 </p>
        
                 <h3 class="mb-3">sub sub title</h3>
@@ -586,7 +586,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
                 </p>
        
                 <h3 class="mb-3">sub sub title</h3>
@@ -604,7 +604,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
                 </p>
        
                 <h3 class="mb-3">sub sub title</h3>
@@ -622,7 +622,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
                 </p>
        
                 <h3 class="mb-3">sub sub title</h3>
@@ -640,7 +640,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
                 </p>
        
                 <h3 class="mb-3">sub sub title</h3>
@@ -658,7 +658,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
                 </p>
        
                 <h3 class="mb-3">sub sub title</h3>
@@ -676,7 +676,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
                 </p>
        
                 <h3 class="mb-3">sub sub title</h3>
@@ -694,7 +694,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
                 </p>
        
                 <h3 class="mb-3">sub sub title</h3>
@@ -712,7 +712,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
                 </p>
        
                 <h3 class="mb-3">sub sub title</h3>
@@ -730,7 +730,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
                 </p>
        
                 <h3 class="mb-3">sub sub title</h3>
@@ -748,7 +748,7 @@ export const gEditorConfig = (previousData,htmlSetter) => {
                 <p class="mb-3 text-center">
              PARAGRAPH
                     <br/>
-                    <a href="https://topdev.tech/signup" target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
+                    <a href="https://topdev.tech/pricing" class="mainCta"target="_blank" >Need a Website or Web App? Signup for a free consultation</a>      
                 </p>
        
                 <h3 class="mb-3">sub sub title</h3>

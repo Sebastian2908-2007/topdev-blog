@@ -32,7 +32,9 @@ export const addEditorCommand = (editor,setThumbNail,htmlSetter) => {
        //htmlSetter({title:'some title',html:editor.getHtml()});
        const rawHtml = editor.getHtml();
        //console.log(rawHtml.match(/<img[^>]+src="data([^">]+)/g)[0] + '"/>');
-       const thumbNail = rawHtml.match(/<img[^>]+src="data([^">]+)/g)[0]  + '"/>';
+      const thumbNail = rawHtml.match(/<img[^>]+src="data([^">]+)/g)[0]  + '"/>';
+     
+      // const thumbNail = rawHtml.match(/<img([^">]+?)/);
        setThumbNail(thumbNail);
        console.log(thumbNail);
        editor.DomComponents.clear();

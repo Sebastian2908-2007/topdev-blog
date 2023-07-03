@@ -39,7 +39,7 @@ const Likes = ({postObj,setLoginModalOpen}) => {
 
 return(
   
-    <button className="like-share-icon p-2 rounded" onClick={()=>
+    <button className="like-share-icon p-2 rounded likeModal" onClick={()=>
       !decodedToken ? addLike()
       :
         addLike(decodedToken.id,postObj._id)}>

@@ -15,9 +15,9 @@ function Cube() {
       if (!meshRef.current) {
         return;
       }
-      meshRef.current.rotation.x += 0.007;
-      meshRef.current.rotation.z += 0.007;
-      meshRef.current.rotation.y += 0.007;
+     meshRef.current.rotation.x += 0.011;
+      meshRef.current.rotation.y += 0.011;
+      meshRef.current.rotation.z += 0.011;
     });
   
     return (

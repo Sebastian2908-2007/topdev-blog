@@ -14,7 +14,7 @@ const HeaderDropList = () => {
   const isLoggedIn = cookie.get('isLoggedIn');
   const isAdmin = cookie.get('isAdmin');
   const router = useRouter();
-console.log(isAdmin);
+
   const logout = () => {
     cookie.remove('isLoggedIn');
     cookie.remove('isAdmin');
