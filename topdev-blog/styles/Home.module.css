@@ -67,8 +67,31 @@
 
 @media screen and (min-width:360px) {
   .imgDiv{
-    width:22%;
+    width:24%;
+    height:12vh
   }
+  .imgDivDrawer{
+    height:12vh;
+    width:26%;
+   }
+}
+@media screen and (min-width:375px) {
+  .imgDiv{
+    width:23%;
+  }
+  .imgDivDrawer{
+    width:25%;
+   }
+}
+@media screen and (min-width:390px) {
+  .imgDiv{
+    width:22%;
+    height:10vh
+  }
+  .imgDivDrawer{
+    height:10vh;
+    width:25%
+   }
 }
 
 @media screen and (min-width:540px) {
@@ -103,14 +126,19 @@
     width:25%;
    }
 }
+@media screen and (min-width:912px) {
+  .imgDivDrawer{
+    width:28%;
+   }
+}
 @media screen and (min-width:1024px) {
   .imgDiv{
     width:9%;
-    height: 13vh;
+    height: 14vh;
   }
   .imgDivDrawer{
-    width:15%;
-  
+    width:16%;
+    height: 10vh;
    }
   .aboutImg{
     height:60vh;
@@ -125,14 +153,36 @@
 @media screen and (min-width:1280px){
   .imgDivDrawer{
     width:18%;
+    height: 8vh;
    }
    .imgDiv{
     width:8%;
-    height: 11vh;
+    height: 12vh;
   }
 }
 @media screen and (min-width:1366px){
   .imgDiv{
+    width:9%;
+   }
+   .imgDivDrawer{
+    width:20%;
+    
+   }
+}
+@media screen and (min-width:1920px){
+  .imgDiv{
+    width:7%;
+   }
+   .imgDivDrawer{
+    width:21%;
+    
+   }
+  }
+@media screen and (min-width:2300px){
+  .imgDivDrawer{
+    height:6vh
+   }
+   .imgDiv{
     width:7%;
    }
 }
