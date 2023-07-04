@@ -65,7 +65,7 @@ return {user:null,token:null};
   };
 
   return (
-    <form className='d-flex flex-column align-items-center mt-5' onSubmit={handleSubmit}>
+    <form className='d-flex flex-column align-items-center mt-5 text-light' onSubmit={handleSubmit}>
       <label>
         Email:
         </label>

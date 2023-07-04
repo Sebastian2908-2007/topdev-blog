@@ -122,7 +122,22 @@ a {
 .btn{
   flex:none !important;
 }
-
+.btn-close{
+  background-color: #8b0000!important;
+}
+.drawer-header{
+  background: rgb(0,0,0);
+}
+.iconLinkDiv{
+  color:rgba(61,96,152,1) !important;
+}
+.logoutSpan{
+  margin: 0% 0% 0% 4%;
+  background-color: #8b0000;
+  &:hover{
+    background-color:#EE4B2B;
+  }
+}
 .title-input{
   border: 3px solid rgb(61, 96, 152);
   border-radius: 8px;
@@ -146,4 +161,12 @@ a {
 }
 .likeModal{
   box-shadow: 0 0 10px #fee084
+}
+.navToggle{
+  border:2px solid rgb(61, 96,152) !important;
+  background-color: rgb(33, 43, 89)  !important;
+  margin-top: 25%
+}
+.drawer-body{
+  background:linear-gradient(295deg,rgba(33,49,89),rgba(61,96,152,1),rgba(0,0,0));
 }

@@ -49,7 +49,7 @@ export default function Register() {
 
   return (
     <div>
-      <h1 className='text-center mt-2'>Register</h1>
+      <h1 className='text-center mt-2 text-light'>Register</h1>
       <form className='d-flex flex-column align-items-center mt-5'  onSubmit={handleSubmit}>
         
         <label htmlFor="userName">UserName</label>

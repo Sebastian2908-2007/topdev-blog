@@ -1,5 +1,7 @@
 import dynamic from 'next/dynamic';
 const HeaderDropLeft = dynamic(() =>import('@/components/HeaderDropList'),{ssr: false});
+//import DrawerNav from '@/components/DrawerNav';
+const  DrawerNav = dynamic(() =>import('@/components/DrawerNav'),{ssr: false});
 import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
 import {ImFacebook} from 'react-icons/im';
@@ -19,8 +21,8 @@ const Layout = ({children}) => {
         priority={true}
     /> 
   </Link>
- 
-  <HeaderDropLeft/>
+ <DrawerNav/>
+ {/* <HeaderDropLeft/>*/}
 </header>
 <main className={styles.main}>
     {children}

@@ -10,6 +10,7 @@
   display: flex;
   flex-direction:row;
   justify-content: space-between;
+  align-items: center;
   width:100%
 }
 .dropDown{
@@ -27,8 +28,13 @@
 }
 .imgDiv{
  position: relative;
- height:11vh;
- width:30%;
+ height:10vh;
+ width:25%;
+}
+.imgDivDrawer{
+ position: relative;
+ height:10vh;
+ width:25%;
 }
 .aboutImg{
  position: relative;
@@ -43,7 +49,8 @@
 .navLink{
   color: #F8E183;
   text-align: center;
-  text-decoration: none;
+ 
+  margin: 0% 0% 0% 5%;
 }
 
 .canvas{
@@ -68,6 +75,9 @@
   .imgDiv{
     width:15%;
   }
+  .imgDivDrawer{
+    width:20%;
+   }
   .aboutImg{
     height:25vh;
     width:50%;
@@ -78,17 +88,30 @@
 }
 @media screen and (min-width:768px) {
   .imgDiv{
-    width:17%;
+    width:15%;
   }
   .dropDown{
     padding-top:5%;
   }
+  .imgDivDrawer{
+    width:22%;
+    height: 8vh;
+   }
+}
+@media screen and (min-width:820px) {
+  .imgDivDrawer{
+    width:25%;
+   }
 }
 @media screen and (min-width:1024px) {
   .imgDiv{
-    width:10%;
-    height: 15vh;
+    width:9%;
+    height: 13vh;
   }
+  .imgDivDrawer{
+    width:15%;
+  
+   }
   .aboutImg{
     height:60vh;
    }
@@ -98,6 +121,20 @@
    .dropDown{
     padding-top:2%;
   }
+}
+@media screen and (min-width:1280px){
+  .imgDivDrawer{
+    width:18%;
+   }
+   .imgDiv{
+    width:8%;
+    height: 11vh;
+  }
+}
+@media screen and (min-width:1366px){
+  .imgDiv{
+    width:7%;
+   }
 }
 
 
