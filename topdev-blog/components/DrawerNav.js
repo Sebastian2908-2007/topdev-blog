@@ -8,6 +8,7 @@ import InfoIcon from '@mui/icons-material/Info';
 import LoginIcon from '@mui/icons-material/Login';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import WebIcon from '@mui/icons-material/Web';
 import LogoutIcon from '@mui/icons-material/Logout';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -72,8 +73,8 @@ function DrawerNav() {
              :
              <Navbar.Toggle  className='d-flex flex-row justify-content-start  iconLinkDiv'><LogoutIcon/><span className=' text-white p-2 rounded logoutSpan' onClick={() => logout()}>Logout</span></Navbar.Toggle >}
              {(isLoggedIn) && (isAdmin === 'true') ? <Navbar.Toggle  className='d-flex flex-row justify-content-start align-items-center   iconLinkDiv'><DashboardIcon/><Link   href='/adminDash' className={styles.navLink}>Dashboard</Link></Navbar.Toggle >:null}
-            
              {isLoggedIn ? null: <Navbar.Toggle  className='d-flex flex-row justify-content-start align-items-center  iconLinkDiv'><HowToRegIcon/><Link   className={styles.navLink} href='/register'>Register</Link></Navbar.Toggle >}
+             <Navbar.Toggle  className='d-flex flex-row justify-content-start align-items-center  iconLinkDiv'><WebIcon/><a  className={styles.navLink} href='https://topdev.tech/' target='_blank'>Need web design?</a></Navbar.Toggle >
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
